@@ -1,0 +1,34 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1788792501257,
+      "tag": "0000_initial_live_answers",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1788792641767,
+      "tag": "0001_domain_invariants",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1788793087490,
+      "tag": "0002_version_retention",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1788796123349,
+      "tag": "0003_contribution_types",
+      "breakpoints": true
+    }
+  ]
+}

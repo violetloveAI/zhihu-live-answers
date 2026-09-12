@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="活答案 · 好奇心俱乐部的图文界面手册。了解答案广场、我的经历、看山的小本子，以及贡献、追问、审阅和版本追溯的完整流程。">
+  <meta name="color-scheme" content="light">
+  <title>活答案 · 界面与功能手册</title>
+  <style>
+    :root{--ink:#222d5e;--blue:#3154e8;--muted:#596684;--paper:#f6f7fc;--white:#fff;--line:#dce1ee;--yellow:#ffe27b;--yellow-soft:#fff8df;--green:#216c59;--green-soft:#eaf7f1;--radius:18px;--shadow:4px 5px 0 var(--ink)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:95px}body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:16px;line-height:1.85;-webkit-font-smoothing:antialiased}a{color:var(--blue);text-underline-offset:4px}button,a{-webkit-tap-highlight-color:transparent}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--blue);outline-offset:4px}button{font:inherit;cursor:pointer}p{margin:0 0 1em}h1,h2,h3,h4{line-height:1.35;letter-spacing:-.035em;margin:0}h1{font-size:clamp(36px,4.2vw,64px);font-weight:850}h2{font-size:clamp(25px,3vw,36px);font-weight:800}h3{font-size:21px;margin:1.6em 0 .6em}h4{font-size:17px;margin:0 0 .45em}ul,ol{padding-left:1.5em;margin:.65em 0 1.1em}li+li{margin-top:.45em}strong{font-weight:750}small{font-size:13px}.skip-link{position:absolute;top:-100px;left:16px;background:var(--white);z-index:100;padding:12px 20px}.skip-link:focus{top:10px}.topbar{background:var(--white);border-bottom:2px solid var(--ink);position:sticky;top:0;z-index:20;min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px 34px}.wordmark{display:flex;align-items:center;gap:16px;color:var(--ink);text-decoration:none;font-size:26px;font-weight:900;letter-spacing:-.055em}.wordmark .dot{color:var(--blue)}.wordmark small{font-size:13px;letter-spacing:.12em;font-weight:650;border-left:1px solid var(--ink);padding-left:17px}.header-actions{display:flex;align-items:center;gap:10px}.button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;gap:8px;padding:8px 17px;border:1.5px solid var(--ink);border-radius:10px;background:var(--white);color:var(--ink);text-decoration:none;font-size:14px;font-weight:650;transition:background .15s ease,color .15s ease}.button:hover{background:#eef0fc}.button.primary{color:#fff;background:var(--blue);border-color:var(--blue)}.button.primary:hover{background:#2444cb}.layout{max-width:1480px;margin:0 auto;display:grid;grid-template-columns:220px minmax(0,1fr);gap:48px;padding:42px 38px 90px}.toc{position:sticky;top:112px;align-self:start;max-height:calc(100vh - 140px);overflow:auto;padding:0 12px 10px 0}.toc-label{color:var(--muted);font-size:12px;letter-spacing:.14em;font-weight:750;margin:0 0 14px 12px}.toc a{display:block;color:var(--muted);font-size:14px;line-height:1.5;min-height:44px;padding:10px 12px;text-decoration:none;border-radius:9px}.toc a:hover{background:#e8ecfc;color:var(--blue)}.toc a.major{color:var(--ink);font-weight:700}.toc a span{font-size:11px;color:#7a85a4;margin-right:10px;font-variant-numeric:tabular-nums}.toc .toc-note{border-top:1px solid var(--line);font-size:12px;color:var(--muted);padding:18px 12px 0;margin-top:18px}.manual{min-width:0}.hero{padding:16px 0 42px}.eyebrow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;color:var(--blue);font-size:12px;letter-spacing:.16em;font-weight:750;margin-bottom:21px}.tag{display:inline-block;border-radius:5px;padding:3px 9px;background:var(--yellow-soft);border:1px solid #e9cd70;color:#735812;font-size:12px;font-weight:650;letter-spacing:.03em;white-space:nowrap}.hero h1 em{font-style:normal;color:var(--blue)}.hero .lead{font-size:20px;line-height:1.8;max-width:740px;margin:24px 0 0;color:var(--muted)}.hero-note{margin-top:24px;display:flex;gap:16px;align-items:flex-start;border-left:4px solid var(--yellow);padding:8px 0 8px 18px;max-width:760px;color:var(--muted);font-size:14px}.hero-note p{margin:0}.section{border-top:1px solid var(--line);padding:46px 0 10px;margin-top:8px;scroll-margin-top:95px}.section-head{display:flex;align-items:flex-start;gap:16px;margin-bottom:20px}.section-index{display:grid;place-items:center;flex:0 0 36px;height:36px;border:1.5px solid var(--ink);border-radius:8px;background:var(--yellow);font-size:14px;font-weight:800;margin-top:3px}.section-head p{margin:10px 0 0;color:var(--muted);font-size:16px}.intro{max-width:780px;color:var(--muted)}.page-map{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:25px 0}.map-card{padding:24px 21px;background:var(--white);border:1.5px solid var(--ink);border-radius:var(--radius);box-shadow:3px 4px 0 var(--ink)}.map-card:nth-child(2){border-top:6px solid var(--blue);padding-top:19px}.map-card:nth-child(3){background:var(--yellow-soft);border-top:6px solid var(--yellow);padding-top:19px}.map-card .map-kicker{font-size:11px;letter-spacing:.12em;color:var(--muted);margin-bottom:12px}.map-card h3{margin:0 0 11px}.map-card p{font-size:14px;margin-bottom:12px}.map-card .map-question{font-weight:700;color:var(--ink)}.map-card a{font-size:13px}.note{padding:17px 20px;border-radius:12px;background:#edf1ff;color:var(--muted);font-size:14px;margin:20px 0}.note p:last-child{margin-bottom:0}.note strong{color:var(--ink)}.note.warm{background:var(--yellow-soft);border:1px solid #efdfa5}.note.green{background:var(--green-soft);color:#375c50}.note .note-label{display:block;font-weight:800;color:var(--ink);margin-bottom:5px}.flow-strip{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:24px 0}.flow-step{padding:16px 13px;background:var(--white);border:1px solid var(--line);border-radius:12px;font-size:13px}.flow-step b{display:block;color:var(--blue);font-size:12px;letter-spacing:.07em;margin-bottom:7px}.flow-step strong{display:block;font-size:15px}.route-list{list-style:none;padding:0;counter-reset:route;margin:25px 0}.route-list li{counter-increment:route;display:grid;grid-template-columns:34px minmax(0,1fr);gap:14px;padding:16px 0;border-bottom:1px dashed var(--line);margin:0}.route-list li::before{content:counter(route);display:grid;place-items:center;background:var(--blue);color:var(--white);width:30px;height:30px;border-radius:50%;font-size:13px;font-weight:700;margin-top:4px}.route-list strong{display:block}.route-list p{margin:3px 0 0;color:var(--muted);font-size:14px}.route-list a{font-size:13px}.figure{margin:24px 0 28px;border:1.5px solid var(--ink);border-radius:14px;background:var(--white);overflow:hidden;box-shadow:3px 4px 0 #d5dbee}.figure .image-link{display:block;position:relative;text-decoration:none;border-bottom:1px solid var(--line)}.figure img{display:block;width:100%;height:auto;background:var(--white)}.figure .image-link::after{content:"点击查看原图 ↗";position:absolute;right:10px;bottom:10px;background:rgba(255,255,255,.96);border:1px solid var(--line);border-radius:7px;padding:3px 9px;font-size:11px;color:var(--ink);line-height:1.7;box-shadow:0 2px 8px #222d5e0a}.figure figcaption{padding:14px 19px;color:var(--muted);font-size:13px;line-height:1.8}.figure figcaption strong{color:var(--ink)}.caption-number{display:inline-block;font-weight:800;font-size:11px;color:var(--blue);margin-right:8px;letter-spacing:.08em}.annotation-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px;margin:20px 0 28px}.annotation{padding:18px 0;border-top:3px solid var(--blue)}.annotation b{font-size:12px;color:var(--blue);margin-right:8px}.annotation strong{font-size:16px}.annotation p{font-size:14px;color:var(--muted);margin:8px 0 0}.two-column{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.info-card{padding:22px 24px;border:1px solid var(--line);border-radius:14px;background:var(--white);min-width:0}.info-card h3{font-size:18px;margin:0 0 10px}.info-card p,.info-card li{font-size:14px;color:var(--muted)}.info-card p:last-child,.info-card ul:last-child{margin-bottom:0}.path{color:var(--ink);font-weight:650}.path .arrow{color:var(--blue);padding:0 5px}.role{display:inline-block;font-size:11px;padding:2px 8px;margin-left:7px;border:1px solid #c4cdee;border-radius:99px;color:#405582;background:#f2f5ff;vertical-align:middle;font-weight:650;letter-spacing:0}.list-rows{margin:20px 0}.list-row{display:grid;grid-template-columns:160px minmax(0,1fr);gap:24px;border-top:1px solid var(--line);padding:17px 0}.list-row:last-child{border-bottom:1px solid var(--line)}.list-row dt{font-weight:750}.list-row dd{margin:0;color:var(--muted);font-size:14px}.list-row dd strong{color:var(--ink)}.status-key{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.status-key span{font-size:12px;padding:4px 9px;background:var(--white);border:1px solid var(--line);border-radius:7px}.status-key .good{color:var(--green);background:var(--green-soft)}.status-key .review{background:var(--yellow-soft);color:#755619}.status-key .waiting{color:var(--blue);background:#edf1ff}.mobile-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;max-width:600px;margin:25px auto}.mobile-pair .figure{margin:0}.mobile-pair .figure img{max-height:720px;object-fit:contain;object-position:top center}.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--white);margin:22px 0}table{border-collapse:collapse;width:100%;font-size:14px}th,td{text-align:left;vertical-align:top;padding:13px 16px;border-bottom:1px solid var(--line)}th{background:#eef1fa;font-size:13px;color:var(--ink)}td{color:var(--muted)}tr:last-child td{border-bottom:0}td:first-child{color:var(--ink);font-weight:650;min-width:125px}th:first-child{min-width:125px}.role-table td:not(:first-child),.role-table th:not(:first-child){text-align:center;min-width:95px}.status-table td:first-child{width:23%}.status-table td:nth-child(2){width:25%;min-width:145px}.yes{color:var(--green);font-weight:650}.dash{color:#8b92a7}.check-state{display:inline-block;font-size:12px;border-radius:6px;padding:3px 8px;background:var(--green-soft);color:var(--green);font-weight:750}.check-state.pending{background:var(--yellow-soft);color:#735812}.index-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 28px;margin:22px 0}.index-item{border-bottom:1px dashed var(--line);padding-bottom:15px;font-size:14px}.index-item strong{display:block;color:var(--ink);margin-bottom:4px}.index-item p{color:var(--muted);margin:0}.faq{margin:16px 0}.faq details{background:var(--white);border:1px solid var(--line);border-radius:11px;margin-bottom:10px;padding:0 18px}.faq summary{cursor:pointer;font-weight:650;min-height:50px;padding:11px 0}.faq details p{font-size:14px;color:var(--muted);padding:0 0 8px}.end-card{margin:45px 0 0;padding:30px 32px;background:var(--yellow);border:1.5px solid var(--ink);border-radius:var(--radius);box-shadow:var(--shadow)}.end-card h2{font-size:27px}.end-card p{margin:13px 0 20px;max-width:720px;color:#435177}.manual-footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;margin-top:32px;font-size:12px;color:var(--muted)}.print-only{display:none}
+    .dialog-figure{max-width:820px;margin-inline:auto}.dialog-figure.narrow{max-width:580px}.wordmark img{width:35px;height:35px;object-fit:contain;flex:0 0 35px}.wordmark{gap:10px}
+    @media(min-width:1600px){.layout{max-width:1540px;gap:58px}}
+    @media(max-width:1100px){.layout{grid-template-columns:185px minmax(0,1fr);gap:27px;padding:32px 24px 70px}.toc a{font-size:13px}.map-card{padding:20px 16px}.map-card h3{font-size:19px}.flow-strip{grid-template-columns:repeat(3,minmax(0,1fr))}.annotation-grid{gap:14px}.topbar{padding-inline:25px}.wordmark small{display:none}.list-row{grid-template-columns:140px minmax(0,1fr);gap:17px}}
+    @media(max-width:820px){.layout{display:block;max-width:760px;padding:25px 22px 65px}.toc{position:static;max-height:none;overflow:visible;padding:0 0 22px;border-bottom:1px solid var(--line);margin-bottom:20px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:3px}.toc-label{grid-column:1/-1;margin-bottom:6px}.toc a{font-size:12px;min-height:40px;padding:8px}.toc a span{margin-right:5px}.toc .toc-note{display:none}.hero{padding-top:12px}.page-map{gap:11px}.map-card p{font-size:13px}.section{padding-top:35px}.annotation-grid{grid-template-columns:1fr;gap:2px}.annotation{padding:13px 0;border-top:1px solid var(--line)}.annotation p{margin-top:4px}.section-head h2{font-size:28px}.header-actions .button{font-size:13px;padding:7px 11px}}
+    @media(max-width:560px){body{font-size:15px}.topbar{padding:9px 16px;min-height:66px;gap:12px}.wordmark{font-size:23px;white-space:nowrap}.header-actions{gap:7px}.header-actions .button{font-size:12px;padding:7px 10px;min-height:42px}.layout{padding:20px 17px 60px}.toc{grid-template-columns:repeat(2,minmax(0,1fr));gap:2px}.toc a{font-size:12px}.hero h1{font-size:36px}.hero .lead{font-size:17px;margin-top:19px}.eyebrow{font-size:10px;letter-spacing:.1em}.hero-note{font-size:13px;padding-left:13px}.page-map{grid-template-columns:1fr;gap:14px}.map-card{padding:20px}.map-card:nth-child(2),.map-card:nth-child(3){padding-top:15px}.map-card p{font-size:14px}.map-card .map-kicker{margin-bottom:6px}.map-card h3{font-size:21px}.map-card .map-question{margin-bottom:7px}.flow-strip{grid-template-columns:1fr;gap:8px}.flow-step{display:grid;grid-template-columns:70px 1fr;gap:0 12px;padding:12px 14px}.flow-step b{grid-row:span 2;align-self:center;margin:0}.flow-step strong{font-size:15px}.two-column,.index-list{grid-template-columns:1fr;gap:15px}.info-card{padding:19px}.list-row{grid-template-columns:1fr;gap:4px;padding:15px 0}.list-row dt{font-size:15px}.section-head{gap:12px}.section-head h2{font-size:25px}.section-head p{font-size:14px}.section-index{flex-basis:31px;height:31px;font-size:12px}.figure{margin:20px 0 25px;border-radius:10px;box-shadow:2px 3px 0 #d5dbee}.figure figcaption{padding:12px 14px;font-size:12px}.figure .image-link::after{font-size:10px;right:6px;bottom:6px;padding:2px 6px}.note{padding:15px;font-size:13px}.mobile-pair{gap:12px}.mobile-pair .figure figcaption{padding:10px;font-size:11px}th,td{padding:11px 12px;font-size:12px}.end-card{padding:24px 21px}.end-card h2{font-size:25px}.manual-footer{font-size:11px}.role{margin-left:4px}.route-list li{gap:10px}}
+    @media screen and (max-width:540px){.status-table{display:block;width:100%}.status-table thead{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.status-table tbody{display:block}.status-table tr{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px 12px;padding:16px;border-bottom:1px solid var(--line)}.status-table tr:last-child{border-bottom:0}.status-table td{display:block;width:auto!important;min-width:0!important;padding:0;border:0;font-size:13px;line-height:1.85}.status-table td:first-child{align-self:center;font-size:14px;line-height:1.5}.status-table td:nth-child(2){justify-self:end;align-self:center}.status-table td:nth-child(3){grid-column:1/-1}.status-table .check-state{font-size:11px;padding:3px 7px;white-space:nowrap}.role-table{min-width:490px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+    @media print{@page{size:A4;margin:16mm 14mm}html{scroll-behavior:auto}body{font-size:10pt;line-height:1.65;background:#fff;color:#172147;-webkit-print-color-adjust:exact;print-color-adjust:exact}.topbar{position:static;padding:0 0 8mm;min-height:0;margin-bottom:6mm}.wordmark{font-size:22pt}.wordmark small{display:block;font-size:9pt}.header-actions,.toc,.skip-link,.no-print{display:none!important}.layout{display:block;max-width:none;padding:0}.hero{padding:0 0 7mm}.hero h1{font-size:34pt}.hero .lead{font-size:13pt;margin-top:5mm}.hero-note{font-size:9pt}.eyebrow{font-size:8pt}.section{padding-top:8mm;margin-top:4mm;break-before:auto}.section-head{break-after:avoid;margin-bottom:4mm}.section-head h2{font-size:21pt}.section-head p{font-size:10pt}h3{font-size:14pt;break-after:avoid}h4{font-size:11pt}.page-map{gap:4mm}.map-card{padding:4mm;box-shadow:none;break-inside:avoid}.map-card h3{font-size:13pt}.map-card p,.map-card a{font-size:9pt}.map-card:nth-child(2),.map-card:nth-child(3){padding-top:3mm}.figure{box-shadow:none;margin:5mm 0 6mm;break-inside:avoid;border-width:.3mm}.figure img{max-height:92mm;width:100%;object-fit:contain;object-position:top center}.figure .image-link::after{display:none}.figure figcaption{font-size:8.5pt;padding:3mm 4mm}.annotation-grid{gap:4mm}.annotation{padding:3mm 0}.annotation p,.info-card p,.info-card li,.note,.list-row dd,.index-item,.route-list p{font-size:9pt}.annotation strong{font-size:10pt}.two-column{gap:4mm}.info-card{padding:4mm;break-inside:avoid}.info-card h3{font-size:12pt}.note{padding:4mm;break-inside:avoid}.flow-strip{grid-template-columns:repeat(5,minmax(0,1fr));gap:2mm}.flow-step{font-size:8pt;padding:3mm 2.5mm;break-inside:avoid}.flow-step strong{font-size:9pt}.flow-step b{font-size:8pt}.route-list li{padding:3mm 0;break-inside:avoid}.list-row{grid-template-columns:37mm minmax(0,1fr);gap:4mm;break-inside:avoid}.table-wrap{overflow:visible}table{font-size:8.5pt}th,td{padding:3mm;min-width:0!important}.role-table td:not(:first-child),.role-table th:not(:first-child){min-width:0}.table-wrap,.index-item{break-inside:avoid}.status-table td:first-child{width:22%}.status-table td:nth-child(2){min-width:0;width:24%}.mobile-pair{max-width:110mm;gap:6mm}.mobile-pair .figure img{max-height:100mm}.end-card{box-shadow:none;padding:5mm;margin-top:8mm;break-inside:avoid}.end-card h2{font-size:18pt}.end-card p{font-size:10pt;margin-bottom:0}.manual-footer{font-size:8pt}.print-only{display:block}.faq details{break-inside:avoid}.faq details>p{display:block!important;font-size:9pt}.faq summary{font-size:10pt;min-height:0;padding:3mm 0}.role{font-size:7pt}.tag{font-size:8pt}a{color:inherit;text-decoration:none}p,li{orphans:3;widows:3}}
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">跳到手册正文</a>
+  <header class="topbar">
+    <a class="wordmark" href="#top" aria-label="活答案界面手册首页"><img src="images/avatar.png" width="56" height="57" alt=""><span>活答案<span class="dot">.</span></span><small>好奇心俱乐部 · 使用手册</small></a>
+    <div class="header-actions"><button class="button" type="button" onclick="window.print()">打印手册</button><a class="button primary" href="https://violetloveai.github.io/zhihu-live-answers/" target="_blank" rel="noopener">打开在线演示 ↗</a></div>
+  </header>
+  <div class="layout" id="top">
+    <nav class="toc" aria-label="手册目录">
+      <div class="toc-label">CONTENTS · 阅读目录</div>
+      <a class="major" href="#overview"><span>01</span>三个页面，各管什么</a>
+      <a class="major" href="#quickstart"><span>02</span>五分钟体验路线</a>
+      <a href="#square"><span>03</span>答案广场</a>
+      <a href="#experiences"><span>04</span>我的经历</a>
+      <a href="#notebook"><span>05</span>看山的小本子</a>
+      <a href="#contribute"><span>06</span>贡献、预览与隐私</a>
+      <a href="#questions"><span>07</span>下一问与后续回复</a>
+      <a href="#revisions"><span>08</span>修订、依据与历史</a>
+      <a href="#discovery"><span>09</span>从知乎线索创建议题</a>
+      <a href="#account"><span>10</span>身份、偏好与管理</a>
+      <a href="#mobile"><span>11</span>手机上的使用方式</a>
+      <a class="major" href="#scope"><span>12</span>这一版，已经做到哪</a>
+      <p class="toc-note">截图均来自本地独立演示空间。点击任何截图，可以打开原图查看细节。打印时会隐藏目录和操作按钮。</p>
+    </nav>
+    <main class="manual" id="main-content">
+      <div class="hero">
+        <div class="eyebrow"><span class="tag">本地体验版</span><span>INTERFACE GUIDE / 2026.09.12</span></div>
+        <h1>活答案<span style="color:var(--blue)">.</span><br><em>界面与功能手册</em></h1>
+        <p class="lead">从一份具体经历出发，让看山整理条件、提出下一问，再由人核对依据，让答案长出新的一页。</p>
+        <div class="note"><strong>GitHub Pages 报名演示</strong><p>在线版在当前浏览器保存操作，以虚构教学样例和确定规则展示流程。未连接真实模型、知乎登录或远程社区；清除网站数据会重置体验，不支持跨设备同步。下方截图与功能讲解来自本地完整版本；在线版对应流程采用浏览器演示数据。</p><a href="manual.pdf">下载 PDF 功能手册 ↗</a></div><div class="hero-note"><p>这份手册说明每个主要入口怎么用、操作后发生什么，以及当前版本的真实范围。配图来自同一独立演示空间的不同操作阶段，示例人物、经历和讨论均为演示素材；记录数量会随操作变化。</p></div>
+      </div>
+
+      <section class="section" id="overview" aria-labelledby="overview-title">
+        <div class="section-head"><span class="section-index">01</span><div><h2 id="overview-title">三个页面，各管什么</h2><p>同一个问题，会在不同页面留下不同的记录。</p></div></div>
+        <div class="page-map">
+          <article class="map-card"><div class="map-kicker">READ THE ANSWER</div><h3>答案广场</h3><p class="map-question">这个问题，现在知道什么？</p><p>以议题为中心，看当前答案、适用条件、社区经验和还缺少的依据。</p><a href="#square">看答案，也补一份经历 →</a></article>
+          <article class="map-card"><div class="map-kicker">MY CONTRIBUTIONS</div><h3>我的经历</h3><p class="map-question">我提供过什么材料？</p><p>以自己的贡献为中心，收好经历、评论和参考来源，查找、查看整理结果或管理公开展示。</p><a href="#experiences">打开个人贡献档案 →</a></article>
+          <article class="map-card"><div class="map-kicker">KANSHAN'S NOTEBOOK</div><h3>看山的小本子</h3><p class="map-question">接下来核对什么？</p><p>以答案的研究进展为中心，查看待验证问题、下一问、修订建议和版本变化。</p><a href="#notebook">核对建议，追踪答案变化 →</a></article>
+        </div>
+        <div class="note"><strong>本轮界面的主要调整：</strong>左上角换成鼻子完整可见的看山形象；两个个人页强化“我的贡献”与“看山的研究记录”的分工。广场的分类侧栏只在答案广场出现，切到另外两页不会再混入广场分类入口。</div>
+        <p class="intro">顶部三个入口负责切换网页；写贡献、核对来源、审核差异等局部任务仍使用窗口。两个页面里看到相同的议题名称，是因为材料属于同一问题；个人贡献正文和答案研究进展分别展示。</p>
+        <div class="flow-strip" aria-label="活答案的核心流程">
+          <div class="flow-step"><b>STEP 01</b><strong>看当前答案</strong><span>知道与未知，都写清楚</span></div>
+          <div class="flow-step"><b>STEP 02</b><strong>补具体经历</strong><span>先确认公开内容和身份</span></div>
+          <div class="flow-step"><b>STEP 03</b><strong>继续追问</strong><span>确认后发到本站讨论区</span></div>
+          <div class="flow-step"><b>STEP 04</b><strong>核对新证据</strong><span>把回复与来源纳入审阅</span></div>
+          <div class="flow-step"><b>STEP 05</b><strong>发布新版本</strong><span>保留旧版和变化依据</span></div>
+        </div>
+      </section>
+
+      <section class="section" id="quickstart" aria-labelledby="quickstart-title">
+        <div class="section-head"><span class="section-index">02</span><div><h2 id="quickstart-title">五分钟，走一遍核心体验</h2><p>建议第一次选择“和看山体验完整流程”，可以同时体验贡献与维护者审阅。</p></div></div>
+        <ol class="route-list">
+          <li><div><strong>加入独立演示空间 · 约 30 秒</strong><p>右上角“加入我们” → “和看山体验完整流程”。如果已经是演示维护者，可以直接继续。</p><a href="#account">两种演示身份有什么不同？</a></div></li>
+          <li><div><strong>切换三个页面 · 约 1 分钟</strong><p>先读广场答案，再看“我的经历”的四份示例，最后打开“看山的小本子”。这时最容易看清个人输入和研究进展的区别。</p></div></li>
+          <li><div><strong>写一份贡献 · 约 1 分钟</strong><p>在广场打开想补充的议题，点“我也经历过”，写下具体情境或填入演示经历。选公开身份 → 检查公开预览 → 勾选确认保存。“我的经历”的“写一份新贡献”也可以继续补充当前议题。</p><a href="#contribute">查看公开预览与贡献管理</a></div></li>
+          <li><div><strong>发出一条下一问，并回答它 · 约 1 分钟</strong><p>打开看山的下一问，核对正文与依据，预览后确认发出。进入广场的“下一问与后续回复”，在已送达的问题下输入一条具体回复。</p><a href="#questions">查看提问与回复的完整路径</a></div></li>
+          <li><div><strong>审阅一份修订 · 约 1 分钟</strong><p>打开小本子中的待审修订，对比原文、建议和来源；勾选核对后采纳，再到版本历史看新旧答案。演示空间已经准备一份样例修订，也可以在来源中另选证据生成新建议。</p><a href="#revisions">查看修订和版本说明</a></div></li>
+        </ol>
+        <div class="note warm"><strong>不是自动改写：</strong>提交经历、收到回复、生成建议，都不会直接替换当前公共答案。只有维护者核对并采纳修订，答案才发布新版本。这里的五分钟是熟悉入口的建议时间，可以随时停下来阅读。</div>
+      </section>
+
+      <section class="section" id="square" aria-labelledby="square-title">
+        <div class="section-head"><span class="section-index">03</span><div><h2 id="square-title">答案广场</h2><p>围绕一个议题，把当前答案、不同经历和仍待验证的条件放在一起。</p></div></div>
+        <figure class="figure"><a class="image-link" href="images/01-square.png" target="_blank" rel="noopener" aria-label="查看答案广场原图"><img src="images/01-square.png" alt="答案广场：顶部三页导航、左侧议题分类、当前问题与刘看山形象" width="1440" height="1050" fetchpriority="high"></a><figcaption><span class="caption-number">FIG. 01</span><strong>广场总览。</strong>完整的看山头像承担品牌识别；左侧切换议题，顶部切换整个功能页面。向下滚动可查看答案、条件、经历和后续讨论。</figcaption></figure>
+        <div class="annotation-grid">
+          <article class="annotation"><b>A</b><strong>找到想继续看的问题</strong><p>左侧分类与议题列表切换内容；右上放大镜搜索已有议题。点问题旁的星星关注，再用“我的关注”查看收藏的议题。</p></article>
+          <article class="annotation"><b>B</b><strong>每个条件，都可以追溯</strong><p>“目前，我们知道”显示已确认答案。点击支持、反例或待验证标签，打开对应依据；“看看依据”展示全部来源。</p></article>
+          <article class="annotation"><b>C</b><strong>沿着未知继续探索</strong><p>“看山的下一问”解释为什么要问；“经验里的不同侧面”展示贡献；“还想一起弄明白”保留尚不能下结论的条件。</p></article>
+        </div>
+        <dl class="list-rows">
+          <div class="list-row"><dt>版本号 / 答案成长记</dt><dd>查看历次已保存的答案与条件，进入修订建议。版本越多，时间线越完整。</dd></div>
+          <div class="list-row"><dt>下一问与后续回复</dt><dd>查看本站问题的送达状态和实际回复，继续补充经验或回答问题。</dd></div>
+          <div class="list-row"><dt>查看来源状态</dt><dd>查看当前素材是演示回放还是真实接口记录，以及最近资料时间。更新失败时仍保留之前的资料。</dd></div>
+        </dl>
+        <p class="intro">关注与视觉偏好保存在当前浏览器。这里的关注是方便再次找到议题的收藏功能，本版没有消息推送。</p>
+      </section>
+
+      <section class="section" id="experiences" aria-labelledby="experiences-title">
+        <div class="section-head"><span class="section-index">04</span><div><h2 id="experiences-title">我的经历</h2><p>这是你的贡献档案：关心“我写了什么、放在哪里、现在是什么状态”。</p></div></div>
+        <figure class="figure"><a class="image-link" href="images/02-experiences.png" target="_blank" rel="noopener" aria-label="查看我的经历页面原图"><img src="images/02-experiences.png" alt="我的经历页面：个人贡献档案、贡献类型和搜索筛选、跨议题的经历记录" width="1440" height="1050" loading="lazy"></a><figcaption><span class="caption-number">FIG. 02</span><strong>个人输入，集中收好。</strong>画面中的初始记录是明确标注的虚构示例。新增会增加记录；撤回、删除会更新状态和可见内容，仍保留占位记录用于管理。</figcaption></figure>
+        <div class="two-column">
+          <article class="info-card"><h3>记录里有什么</h3><ul><li><strong>亲身经历：</strong>你遇到的情境、行动与结果。</li><li><strong>评论与回复：</strong>针对问题的补充、疑问或回应。</li><li><strong>补充来源：</strong>参考链接和你对其作用的说明。</li><li>每份记录保留所属议题、公开身份、时间及状态。</li></ul></article>
+          <article class="info-card"><h3>在这里可以做什么</h3><ul><li>按贡献类型筛选，输入关键词查找自己的记录。</li><li>查看跨议题的贡献及它与当前条件的整理关联。</li><li>打开贡献详情，核对理由、依据，必要时重新整理。</li><li>新增贡献；在自己的详情中撤回公开展示或删除正文。</li></ul></article>
+        </div>
+        <div class="note"><strong>与小本子的区别：</strong>左侧是本人的档案与统计，右侧是编号贡献日志，按“我提供的材料”组织。它不负责批准其他人的问题或修改公共答案。点“我参与的问题”或记录的所属议题，才会前往答案广场。</div>
+      </section>
+
+      <section class="section" id="notebook" aria-labelledby="notebook-title">
+        <div class="section-head"><span class="section-index">05</span><div><h2 id="notebook-title">看山的小本子</h2><p>这是研究与审阅的工作台：关心“还有什么没弄明白、下一步该核对什么”。</p></div></div>
+        <figure class="figure"><a class="image-link" href="images/03-notebook.png" target="_blank" rel="noopener" aria-label="查看看山的小本子页面原图"><img src="images/03-notebook.png" alt="看山的小本子：区别于个人贡献档案的研究工作台，汇总待核对问题、修订与答案进展" width="1440" height="1050" loading="lazy"></a><figcaption><span class="caption-number">FIG. 03</span><strong>研究进展，按任务展开。</strong>示例为维护者视角。普通贡献者看到有权查看的公开进展，待审按钮不会开放给普通贡献者。</figcaption></figure>
+        <dl class="list-rows">
+          <div class="list-row"><dt>待验证的条件</dt><dd>用“待验证”筛选查看“这几处，还想弄明白”的条件便签。点“查看已有依据”打开该条件的资料；点“为这个议题补充经历”打开对应议题的贡献表，之后再由看山整理关联。</dd></div>
+          <div class="list-row"><dt>下一问</dt><dd>看山提出的具体追问，包括提问理由、依据和状态。维护者可核对正文，再决定发出、暂缓或不采纳。</dd></div>
+          <div class="list-row"><dt>修订建议 <span class="role">维护者</span></dt><dd>查看建议新增、修改或移除哪些内容，核对引用，再决定是否更新公共答案。</dd></div>
+          <div class="list-row"><dt>答案成长与来源</dt><dd>按已保存的版本回看研究进展；打开来源，检查资料支持什么、还有哪些限制。</dd></div>
+        </dl>
+        <div class="status-key" aria-label="常见记录状态"><span class="review">待确认 / 待审阅</span><span class="review">需要再核对</span><span class="waiting">稍后再看</span><span class="good">已发出 / 已采纳</span><span>未采纳</span></div>
+        <p class="intro">暖色纸张、打孔笔记和深蓝进展摘要，让它与个人贡献日志形成清楚区别。使用“待验证”“下一问”“答案成长”等记录筛选及搜索定位问题；维护者另可筛选“待我审阅”。待审建议只是在等待人的判断，“稍后再看”和“不采纳”都会保留当前答案。</p>
+      </section>
+
+      <section class="section" id="contribute" aria-labelledby="contribute-title">
+        <div class="section-head"><span class="section-index">06</span><div><h2 id="contribute-title">贡献、公开预览与隐私</h2><p>先让你确认要公开的内容，再交给看山整理。</p></div></div>
+        <p class="path">新增贡献 <span class="arrow">→</span> 选择类型与身份 <span class="arrow">→</span> 检查公开预览 <span class="arrow">→</span> 勾选确认 <span class="arrow">→</span> 保存并整理</p>
+        <figure class="figure dialog-figure narrow"><a class="image-link" href="images/04-public-preview.png" target="_blank" rel="noopener" aria-label="查看贡献公开预览原图"><img src="images/04-public-preview.png" alt="贡献的公开预览窗口，显示对外身份、待确认的公开正文，以及必须勾选的公开确认项" width="580" height="638" loading="lazy"></a><figcaption><span class="caption-number">FIG. 04</span><strong>预览的，就是准备公开的内容。</strong>可以返回修改正文或身份。只有明确勾选确认后，提交按钮才可用。</figcaption></figure>
+        <div class="two-column">
+          <article class="info-card"><h3>三种公开身份</h3><p><strong>昵称：</strong>使用当前账号显示名称。<br><strong>匿名：</strong>公开显示“匿名知友”。<br><strong>化名：</strong>为这次贡献填写一个 2–24 字的名字。</p><p>公开身份按每次贡献选择，不需要为了换署名退出账号。</p></article>
+          <article class="info-card"><h3>隐私检查的边界</h3><p>系统会尝试隐藏常见手机号、邮箱和身份证号，并提示检测结果。它不能保证识别所有隐私信息。</p><p>姓名、地址、学校、工作单位、具体情境等仍需要你自行检查。公开前可以返回修改。</p></article>
+        </div>
+        <figure class="figure dialog-figure narrow"><a class="image-link" href="images/05-experience-detail.png" target="_blank" rel="noopener" aria-label="查看贡献整理详情原图"><img src="images/05-experience-detail.png" alt="贡献详情中的看山整理关联：支持或反例关系、适用条件、理由和关联依据入口" width="580" height="1078" loading="lazy"></a><figcaption><span class="caption-number">FIG. 05</span><strong>保存之后，可以检查整理依据。</strong>看山展示材料与条件的关系、理由及仍需保留的疑问。当前演示空间的整理结果来自本地演示逻辑。</figcaption></figure>
+        <dl class="list-rows">
+          <div class="list-row"><dt>整理没完成</dt><dd>贡献已保存，页面显示当前整理状态或错误；作者和维护者可点“请看山再整理一次”。正在处理时可检查状态。</dd></div>
+          <div class="list-row"><dt>补充来源</dt><dd>选择“补充来源”，填写公开 HTTPS 链接和说明。系统保存引用，标注“贡献者提供 · 待核对”，不代表已验证链接内容。</dd></div>
+          <div class="list-row"><dt>撤回公开展示</dt><dd>自己的贡献详情 → “管理这份贡献” → 勾选确认 → “撤回公开展示”。公开正文和相关整理关联被隐藏。</dd></div>
+          <div class="list-row"><dt>删除经历正文</dt><dd>同一管理入口可进一步删除保存的原始正文。系统保留最小操作记录；引用这份贡献的历史内容会标记来源不可用。</dd></div>
+        </dl>
+        <div class="note warm">已经撤回或删除的演示样例不会在刷新后自动补回。本版不提供已提交正文的直接编辑入口；提交之前，请利用公开预览认真检查。</div>
+      </section>
+
+      <section class="section" id="questions" aria-labelledby="questions-title">
+        <div class="section-head"><span class="section-index">07</span><div><h2 id="questions-title">下一问与后续回复</h2><p>把“尚不知道”变成能被具体经历回答的问题。</p></div></div>
+        <h3>先审阅，再发出 <span class="role">维护者</span></h3>
+        <p>广场“看山的下一问”或小本子对应记录 → 查看提问理由、待验证条件和依据 → 编辑正文与公开身份 → “预览后再决定” → 勾选确认并发出。也可以展开“暂时不发出这条问题”，选择稍后再看或不采纳。</p>
+        <figure class="figure dialog-figure narrow"><a class="image-link" href="images/06-probe-preview.png" target="_blank" rel="noopener" aria-label="查看下一问公开预览原图"><img src="images/06-probe-preview.png" alt="下一问的公开预览，明确本站议题讨论区目标，并展示提问正文、公开身份及确认选项" width="580" height="962" loading="lazy"></a><figcaption><span class="caption-number">FIG. 06</span><strong>问题发往本站议题讨论区。</strong>确认前可以核对正文、身份与依据；生成建议本身不会直接发布。</figcaption></figure>
+        <h3>收到问题，实际写一条回复 <span class="role">登录用户</span></h3>
+        <p>广场“下一问与后续回复” → 找到已送达的问题 → “回答这条下一问” → 输入具体回复 → 检查公开预览并保存。回复会保留它回应的问题，在该问题下展示，也进入自己的贡献记录。</p>
+        <figure class="figure dialog-figure narrow"><a class="image-link" href="images/07-discussion.png" target="_blank" rel="noopener" aria-label="查看站内下一问及回复原图"><img src="images/07-discussion.png" alt="本站讨论记录，显示已经送达的下一问，以及实际输入并保存、绑定该问题的演示回复" width="580" height="832" loading="lazy"></a><figcaption><span class="caption-number">FIG. 07</span><strong>问题与回复保留在同一条讨论中。</strong>这条回复由演示流程实际输入并保存，属于独立演示空间，并未发送到知乎。</figcaption></figure>
+        <div class="note"><strong>状态可以追踪：</strong>问题有排队、发送和送达等状态。可重试的失败会提供维护者重试入口；结果不确定时先核对，避免重复发送。回复成为新证据后，仍需进入修订审核，才能影响公共答案。</div>
+      </section>
+
+      <section class="section" id="revisions" aria-labelledby="revisions-title">
+        <div class="section-head"><span class="section-index">08</span><div><h2 id="revisions-title">修订、依据与版本历史</h2><p>答案怎么变、为什么变、由谁确认，都有来处。</p></div></div>
+        <h3>第一步：选择这次要用的证据 <span class="role">维护者</span></h3>
+        <p>在广场点“看看依据”，或从小本子进入对应议题的来源。阅读摘要、作者和来源状态，勾选“用于修订”，再点击“根据选中的 N 份证据提出修订”。</p>
+        <figure class="figure dialog-figure"><a class="image-link" href="images/10-sources.png" target="_blank" rel="noopener" aria-label="查看来源与证据选择原图"><img src="images/10-sources.png" alt="来源面板：来源摘要、作者、时间、演示或待核对标识，以及维护者用于修订的选择框" width="820" height="986" loading="lazy"></a><figcaption><span class="caption-number">FIG. 08A</span><strong>修订从具体证据开始。</strong>每条材料标明来源性质；“只看这个条件的依据”可以缩小核对范围。</figcaption></figure>
+        <h3>第二步：逐条核对修改建议 <span class="role">维护者</span></h3>
+        <p>打开待审修订，逐项比较“原来”和“建议改为”，查看新增、修改或移除的理由及引用。必要时展开新版本全文。核对后勾选确认，可填写审阅备注，再采纳、暂缓或不采纳。</p>
+        <figure class="figure dialog-figure"><a class="image-link" href="images/08-revision.png" target="_blank" rel="noopener" aria-label="查看修订差异审核原图"><img src="images/08-revision.png" alt="答案修订审核窗口：新增或修改差异、原文和建议、修改理由、引用证据以及人工采纳确认" width="820" height="1044" loading="lazy"></a><figcaption><span class="caption-number">FIG. 08B</span><strong>建议与生效分开。</strong>图中审阅的是演示空间预先准备的样例修订，依据为相应示例材料；不是把上一张讨论回复自动写入答案。</figcaption></figure>
+        <div class="note warm"><strong>需要重新核对时，不强行发布：</strong>如果建议基于旧答案，或引用资料已经不可用，采纳可能被阻止。回到当前版本与来源核对，再重新生成修订。</div>
+        <h3>第三步：新版本发布，旧版本保留</h3>
+        <p>采纳后，公共答案更新为新版本；从版本号、广场“答案成长记”或本子中的版本记录，可以回看各版全文、条件、贡献署名、审阅人和时间。点击历史条件还能追溯其依据。</p>
+        <figure class="figure dialog-figure"><a class="image-link" href="images/09-history.png" target="_blank" rel="noopener" aria-label="查看答案版本历史原图"><img src="images/09-history.png" alt="答案成长记中当前版本与历史版本并存，显示各版正文、条件与贡献和审阅记录" width="820" height="1034" loading="lazy"></a><figcaption><span class="caption-number">FIG. 08C</span><strong>新的一页，不会抹掉上一页。</strong>样例修订采纳后形成 v2，v1 留在历史中。历史引用在来源被撤回后会标记不可用。</figcaption></figure>
+      </section>
+
+      <section class="section" id="discovery" aria-labelledby="discovery-title">
+        <div class="section-head"><span class="section-index">09</span><div><h2 id="discovery-title">从知乎线索，创建新议题</h2><p>先寻找值得继续讨论的材料，再由人决定问题怎么问。<span class="role">维护者</span></p></div></div>
+        <p class="path">广场“种下一个新问题” <span class="arrow">→</span> 搜索 / 看当前热点 <span class="arrow">→</span> 选择来源 <span class="arrow">→</span> 编辑问题与类型 <span class="arrow">→</span> 创建</p>
+        <figure class="figure dialog-figure narrow"><a class="image-link" href="images/11-discovery.png" target="_blank" rel="noopener" aria-label="查看新议题候选原图"><img src="images/11-discovery.png" alt="新议题候选面板，显示搜索或热点线索、来源性质、选择框和拟创建的问题" width="580" height="816" loading="lazy"></a><figcaption><span class="caption-number">FIG. 09</span><strong>当前配图展示演示候选。</strong>页面标明查询内容、结果数量和抓取时间；不把演示候选当作真实知乎热度或真实用户观点。</figcaption></figure>
+        <div class="two-column">
+          <article class="info-card"><h3>新问题需要材料</h3><p>至少选择一条候选来源，填写具体、开放的问题，选择“学习与成长”或“社会观察”。创建后进入该议题，继续收集经历、整理依据与答案。</p></article>
+          <article class="info-card"><h3>已有问题也可以补线索</h3><p>在来源面板输入搜索词，点“更新搜索来源”。系统保存新增资料、跳过重复项；失败时保留之前取得的内容。</p></article>
+        </div>
+        <p class="intro" style="margin-top:20px">查询失败时会保留上次结果、已选线索和问题草稿，并明确提示上次查询；“重试这次查询”继续失败的那次请求。演示身份的搜索和热点始终使用本地回放。</p>
+      </section>
+
+      <section class="section" id="account" aria-labelledby="account-title">
+        <div class="section-head"><span class="section-index">10</span><div><h2 id="account-title">身份、偏好与管理入口</h2><p>贡献者负责自己的材料，维护者负责公开问题与答案的审阅。</p></div></div>
+        <div class="table-wrap"><table class="role-table"><caption class="print-only">不同身份的操作范围</caption><thead><tr><th scope="col">操作</th><th scope="col">访客</th><th scope="col">贡献者</th><th scope="col">维护者</th></tr></thead><tbody>
+          <tr><td>查看公开答案、依据与版本</td><td class="yes">可以</td><td class="yes">可以</td><td class="yes">可以</td></tr>
+          <tr><td>提交经历、评论、来源</td><td class="dash">需登录</td><td class="yes">可以</td><td class="yes">可以</td></tr>
+          <tr><td>管理自己的贡献</td><td class="dash">—</td><td class="yes">可以</td><td class="yes">仅自己的</td></tr>
+          <tr><td>回答已送达的下一问</td><td class="dash">需登录</td><td class="yes">可以</td><td class="yes">可以</td></tr>
+          <tr><td>创建议题、更新搜索来源</td><td class="dash">—</td><td class="dash">—</td><td class="yes">可以</td></tr>
+          <tr><td>审阅下一问、发布答案新版本</td><td class="dash">—</td><td class="dash">—</td><td class="yes">可以</td></tr>
+          <tr><td>提交内容反馈</td><td class="dash">需登录</td><td class="yes">可以</td><td class="yes">可以</td></tr>
+          <tr><td>处理反馈、查看操作记录</td><td class="dash">—</td><td class="dash">—</td><td class="yes">可以</td></tr>
+        </tbody></table></div>
+        <figure class="figure dialog-figure"><a class="image-link" href="images/12-preferences.png" target="_blank" rel="noopener" aria-label="查看身份与偏好设置原图"><img src="images/12-preferences.png" alt="偏好设置中的三套视觉主题、当前演示身份与知乎接入状态" width="820" height="820" loading="lazy"></a><figcaption><span class="caption-number">FIG. 10</span><strong>右上角身份按钮打开偏好设置。</strong>默认使用 C“好奇心俱乐部”；另有“看山的研究手帐”和“极地知识站”。主题只改变视觉，不改变功能或记录。</figcaption></figure>
+        <div class="index-list">
+          <div class="index-item"><strong>体验两种角色</strong><p>“加入我们”中，“和看山体验完整流程”创建演示维护者；“以经验贡献者身份体验”创建普通贡献者。每次创建独立空间。</p></div>
+          <div class="index-item"><strong>退出当前身份</strong><p>右上角身份 → “退出当前身份”。刷新仍使用有效的当前会话；退出后重新进入演示会创建新空间，不会自动找回之前那一轮体验。</p></div>
+          <div class="index-item"><strong>反馈来源或他人的贡献</strong><p>打开来源／贡献详情 → “反馈这份内容的问题”，说明具体问题后提交。反馈进入维护者审核流程。</p></div>
+          <div class="index-item"><strong>处理反馈</strong><p>广场右侧“内容反馈” → 查看待处理项 → 填写处理说明 → 隐藏相关内容，或保留内容并结束审核。</p></div>
+          <div class="index-item"><strong>回看操作记录</strong><p>广场右侧“操作记录”查看贡献、整理、下一问、发送、修订、撤回与审核等已经保存的流程事件。</p></div>
+          <div class="index-item"><strong>看山的状态提示</strong><p>查找来源、整理经历、等待审阅、更新答案时，形象和提示随操作变化。失败提示会保留已保存内容，提供相应恢复入口。</p></div>
+        </div>
+      </section>
+
+      <section class="section" id="mobile" aria-labelledby="mobile-title">
+        <div class="section-head"><span class="section-index">11</span><div><h2 id="mobile-title">手机上，还是同一套页面</h2><p>三个顶层入口保留，长内容按单列顺序阅读。</p></div></div>
+        <div class="mobile-pair">
+          <figure class="figure"><a class="image-link" href="images/mobile-experiences.png" target="_blank" rel="noopener" aria-label="查看手机版我的经历原图"><img src="images/mobile-experiences.png" alt="手机宽度下的我的经历页面：顶部导航与个人贡献内容按窄屏重新排列" width="390" height="844" loading="lazy"></a><figcaption><strong>我的经历</strong><br>筛选与贡献记录适应窄屏。</figcaption></figure>
+          <figure class="figure"><a class="image-link" href="images/mobile-notebook.png" target="_blank" rel="noopener" aria-label="查看手机版看山的小本子原图"><img src="images/mobile-notebook.png" alt="手机宽度下的看山的小本子：研究进展与任务以窄屏布局呈现" width="390" height="844" loading="lazy"></a><figcaption><strong>看山的小本子</strong><br>按顺序查看研究与审阅记录。</figcaption></figure>
+        </div>
+        <p class="intro">广场在窄屏通过“切换议题”选择问题；“我的经历”和“看山的小本子”继续保留各自的页面内容。这两张图拍于新增一份经历、一条回复并采纳样例修订之后，因此有 6 份贡献、两个议题共 3 个答案版本，与前面初始截图的数量不同。</p>
+        <div class="note">截图来自本地完整版本，用于说明窄屏布局。在线演示可直接在手机打开上方 GitHub Pages 地址；不同设备各自保存演示数据。</div>
+      </section>
+
+      <section class="section" id="scope" aria-labelledby="scope-title">
+        <div class="section-head"><span class="section-index">12</span><div><h2 id="scope-title">这一版，已经做到哪</h2><p>能用的本地流程、演示素材和待完成的真实接入，分别说明。</p></div></div>
+        <div class="table-wrap"><table class="status-table"><thead><tr><th scope="col">能力</th><th scope="col">当前状态</th><th scope="col">这对体验意味着什么</th></tr></thead><tbody>
+          <tr><td>三页导航与交互</td><td><span class="check-state">本地可用</span></td><td>独立页面、筛选、搜索、来源详情、公开预览、审阅窗口和版本浏览已实现。</td></tr>
+          <tr><td>贡献与讨论存储</td><td><span class="check-state">实际保存</span></td><td>演示空间里的新增贡献、确认发问、实际回复、审核决定和版本会保存；刷新继续读取当前空间。</td></tr>
+          <tr><td>初始演示数据</td><td><span class="check-state">明确标注</span></td><td>首次进入个人页准备四份虚构贡献，跨两个议题；维护者另有样例修订。不会反复补回已删除的示例。</td></tr>
+          <tr><td>演示中的看山整理</td><td><span class="check-state">本地演示逻辑</span></td><td>展示“经历 → 条件 → 下一问 → 修订”的交互和数据流。本轮截图不代表真实模型调用。</td></tr>
+          <tr><td>知乎搜索与热点</td><td><span class="check-state pending">独立调用有验证</span></td><td>此前真实搜索和热榜已单独读取成功；演示角色始终使用回放，网页真实数据全链仍需验收。</td></tr>
+          <tr><td>真实模型完整流程</td><td><span class="check-state pending">尚未完成验收</span></td><td>一次真实追问已成功；经历分析、修订仍有格式或限流问题待解决，不能据此宣布真实 AI 全链完成。</td></tr>
+          <tr><td>知乎账号登录</td><td><span class="check-state pending">待官方授权联调</span></td><td>授权入口与流程已准备，真实账号身份和回调尚待验收。当前可先使用明确标记的演示身份。</td></tr>
+          <tr><td>下一问发布位置</td><td><span class="check-state">本站讨论区</span></td><td>本届没有圈子能力。本站讨论与回复不冒充知乎圈子帖子或知乎原生评论。</td></tr>
+          <tr><td>公网演示链接</td><td><span class="check-state">GitHub Pages 演示</span></td><td>在线版提供浏览器交互演示，记录仅保存在当前浏览器；部署演示不代表已完成赛事报名。</td></tr>
+        </tbody></table></div>
+        <div class="faq">
+          <details open><summary>为什么会看到四份并不是我亲自写的记录？</summary><p>它们是首次进入个人页时添加的演示样例，用于体验经历、评论与来源的完整流程，正文明确标注“演示样例 · 虚构情境”。之后你新增的贡献会与这些样例一起出现在当前空间。</p></details>
+          <details open><summary>小本子里的建议，为什么还没出现在公共答案里？</summary><p>建议要经过维护者核对和确认。它可能尚未审阅、被暂缓或不采纳；材料过期或依据不可用时，还需要重新核对。只有采纳修订才会发布新版本。</p></details>
+          <details open><summary>这是一个聊天机器人吗？</summary><p>本版的看山通过整理贡献、关联条件、提出下一问和建议修订协作。操作围绕议题与证据展开，没有自由对话聊天窗口。</p></details>
+          <details open><summary>在线演示如何保存和重置？</summary><p>本在线版无需启动本地服务。数据仅保存于当前浏览器；刷新会保留当前体验，清除该网站数据会重置。退出演示后重新选择身份，会新建演示空间。请使用虚构资料体验，不要填写敏感信息。</p></details>
+        </div>
+        <div class="end-card"><h2>让每一份经历，都有它的位置。</h2><p>先读一个问题，补一份具体材料；再沿着依据与未知，看看答案是如何一点点改变的。</p><a class="button primary no-print" href="https://violetloveai.github.io/zhihu-live-answers/" target="_blank" rel="noopener">回到活答案，开始体验 ↗</a><p class="print-only">在线演示地址：https://violetloveai.github.io/zhihu-live-answers/</p></div>
+        <footer class="manual-footer"><span>活答案 · 好奇心俱乐部 / 界面与功能手册</span><span>2026.09.12 · 本地演示版 · 刘看山使用官方赛事素材</span></footer>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

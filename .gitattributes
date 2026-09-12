@@ -1,0 +1,4 @@
+*.pdf binary
+*.png binary
+*.gif binary
+/_next/** -diff -text

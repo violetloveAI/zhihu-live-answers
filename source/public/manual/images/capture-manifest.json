@@ -1,0 +1,105 @@
+{
+  "capturedAt": "2026-09-11T23:38:18.850Z",
+  "scope": "Fresh synthetic replay workspace; all edits saved through actual local UI; no external APIs or publication",
+  "screenshots": [
+    {
+      "file": "02-experiences.png",
+      "page": "/experiences",
+      "region": "viewport",
+      "mode": "isolated replay",
+      "capturedAt": "2026-09-11T23:38:14.936Z"
+    },
+    {
+      "file": "03-notebook.png",
+      "page": "/notebook",
+      "region": "viewport",
+      "mode": "isolated replay",
+      "capturedAt": "2026-09-11T23:38:15.118Z"
+    },
+    {
+      "file": "01-square.png",
+      "page": "/",
+      "region": "viewport",
+      "mode": "isolated replay",
+      "capturedAt": "2026-09-11T23:38:15.307Z"
+    },
+    {
+      "file": "10-sources.png",
+      "page": "/",
+      "region": "dialog",
+      "mode": "isolated replay",
+      "capturedAt": "2026-09-11T23:38:15.532Z"
+    },
+    {
+      "file": "11-discovery.png",
+      "page": "/",
+      "region": "dialog",
+      "mode": "isolated replay",
+      "capturedAt": "2026-09-11T23:38:15.807Z"
+    },
+    {
+      "file": "12-preferences.png",
+      "page": "/",
+      "region": "dialog",
+      "mode": "isolated replay",
+      "capturedAt": "2026-09-11T23:38:15.993Z"
+    },
+    {
+      "file": "04-public-preview.png",
+      "page": "/",
+      "region": "dialog",
+      "mode": "isolated replay",
+      "capturedAt": "2026-09-11T23:38:16.269Z"
+    },
+    {
+      "file": "05-experience-detail.png",
+      "page": "/experiences",
+      "region": "dialog",
+      "mode": "isolated replay",
+      "capturedAt": "2026-09-11T23:38:16.746Z"
+    },
+    {
+      "file": "06-probe-preview.png",
+      "page": "/",
+      "region": "dialog",
+      "mode": "isolated replay",
+      "capturedAt": "2026-09-11T23:38:17.142Z"
+    },
+    {
+      "file": "07-discussion.png",
+      "page": "/",
+      "region": "dialog",
+      "mode": "isolated replay",
+      "capturedAt": "2026-09-11T23:38:17.725Z"
+    },
+    {
+      "file": "08-revision.png",
+      "page": "/notebook",
+      "region": "dialog",
+      "mode": "isolated replay",
+      "capturedAt": "2026-09-11T23:38:18.084Z"
+    },
+    {
+      "file": "09-history.png",
+      "page": "/notebook",
+      "region": "dialog",
+      "mode": "isolated replay",
+      "capturedAt": "2026-09-11T23:38:18.458Z"
+    },
+    {
+      "file": "mobile-experiences.png",
+      "page": "/experiences",
+      "region": "viewport",
+      "mode": "isolated replay",
+      "capturedAt": "2026-09-11T23:38:18.700Z"
+    },
+    {
+      "file": "mobile-notebook.png",
+      "page": "/notebook",
+      "region": "viewport",
+      "mode": "isolated replay",
+      "capturedAt": "2026-09-11T23:38:18.849Z"
+    }
+  ],
+  "runtimeErrors": []
+}

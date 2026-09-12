@@ -1,0 +1,1953 @@
+{
+  "schemaVersion": 1,
+  "actor": {
+    "id": "browser-demo-maintainer",
+    "workspaceId": "browser-demo",
+    "displayName": "演示维护者",
+    "role": "maintainer",
+    "mode": "replay",
+    "avatarUrl": null
+  },
+  "public": {
+    "topics": [
+      {
+        "id": "public:ai-products",
+        "workspaceId": "public",
+        "slug": "ai-products",
+        "title": "没有编程经验，能否靠 AI 做出可持续产品？",
+        "template": "learning",
+        "summary": "把“做出来”与“用得住”分开，看看不同经历在哪些条件下成立。",
+        "currentVersionId": "public:ai-products:v1",
+        "creatorId": null,
+        "circleId": null,
+        "status": "active",
+        "createdAt": "2026-09-12T00:00:00.000Z",
+        "updatedAt": "2026-09-12T00:00:00.000Z"
+      },
+      {
+        "id": "public:campus-ai",
+        "workspaceId": "public",
+        "slug": "campus-ai",
+        "title": "大学课程应该怎样使用 AI 辅助学习？",
+        "template": "social",
+        "summary": "一个可切换的社会议题教学模板：兼顾学习收益、独立判断与公开规则。",
+        "currentVersionId": "public:campus-ai:v1",
+        "creatorId": null,
+        "circleId": null,
+        "status": "active",
+        "createdAt": "2026-09-12T00:00:00.000Z",
+        "updatedAt": "2026-09-12T00:00:00.000Z"
+      }
+    ],
+    "conditions": [
+      {
+        "id": "public:ai-products:maintenance",
+        "workspaceId": "public",
+        "topicId": "public:ai-products",
+        "label": "持续维护",
+        "description": "上线后的安全、测试与用户反馈需要持续投入。",
+        "kind": "conflict",
+        "evidenceIds": [
+          "public:ai-products:sample-mu"
+        ],
+        "status": "active"
+      },
+      {
+        "id": "public:ai-products:outcome",
+        "workspaceId": "public",
+        "topicId": "public:ai-products",
+        "label": "先说明成功标准",
+        "description": "区分可以展示、有人使用、持续可用三个阶段。",
+        "kind": "context",
+        "evidenceIds": [
+          "public:ai-products:sample-zhou",
+          "public:ai-products:sample-mu",
+          "public:ai-products:sample-lin"
+        ],
+        "status": "active"
+      },
+      {
+        "id": "public:ai-products:prototype",
+        "workspaceId": "public",
+        "topicId": "public:ai-products",
+        "label": "完成原型",
+        "description": "明确范围的小型演示，能较快获得可见成果。",
+        "kind": "support",
+        "evidenceIds": [
+          "public:ai-products:sample-zhou"
+        ],
+        "status": "active"
+      },
+      {
+        "id": "public:ai-products:transfer",
+        "workspaceId": "public",
+        "topicId": "public:ai-products",
+        "label": "能否迁移到新问题？",
+        "description": "还缺少脱离教程和现成提示后的独立判断记录。",
+        "kind": "unknown",
+        "evidenceIds": [
+          "public:ai-products:sample-lin"
+        ],
+        "status": "active"
+      },
+      {
+        "id": "public:campus-ai:maintenance",
+        "workspaceId": "public",
+        "topicId": "public:campus-ai",
+        "label": "独立能力",
+        "description": "借助工具完成作业，并不能直接证明已经理解。",
+        "kind": "conflict",
+        "evidenceIds": [
+          "public:campus-ai:sample-mu"
+        ],
+        "status": "active"
+      },
+      {
+        "id": "public:campus-ai:outcome",
+        "workspaceId": "public",
+        "topicId": "public:campus-ai",
+        "label": "先说明课程与任务",
+        "description": "不同任务需要的工具边界和过程证据可能不同。",
+        "kind": "context",
+        "evidenceIds": [
+          "public:campus-ai:sample-zhou",
+          "public:campus-ai:sample-mu",
+          "public:campus-ai:sample-lin"
+        ],
+        "status": "active"
+      },
+      {
+        "id": "public:campus-ai:prototype",
+        "workspaceId": "public",
+        "topicId": "public:campus-ai",
+        "label": "解释与练习",
+        "description": "有具体学习目标时，AI 可以提供解释与练习线索。",
+        "kind": "support",
+        "evidenceIds": [
+          "public:campus-ai:sample-zhou"
+        ],
+        "status": "active"
+      },
+      {
+        "id": "public:campus-ai:transfer",
+        "workspaceId": "public",
+        "topicId": "public:campus-ai",
+        "label": "怎样公平检验学习成果？",
+        "description": "还缺少可比较的任务结果与清晰一致的评价规则。",
+        "kind": "unknown",
+        "evidenceIds": [
+          "public:campus-ai:sample-lin"
+        ],
+        "status": "active"
+      }
+    ],
+    "evidence": [
+      {
+        "id": "public:ai-products:sample-zhou",
+        "workspaceId": "public",
+        "topicId": "public:ai-products",
+        "sourceType": "replay",
+        "provider": "replay",
+        "sourceId": "teaching:ai-products:0",
+        "url": null,
+        "title": "教学场景 · 非真实知乎内容",
+        "summary": "零编程经验，两天做出了可点击的作品展示；还没有真实用户与持续运行记录。",
+        "displayAuthor": "小周（教学示例）",
+        "fetchedAt": "2026-09-07T00:00:00.000Z",
+        "contentHash": "a71e6da4c5c8ace4dc4796c3be111f68390057b176cf9edf53082b891582d1e1",
+        "visibility": "public",
+        "provenance": {
+          "mode": "replay",
+          "provider": "replay",
+          "fetchedAt": "2026-09-07T00:00:00.000Z"
+        },
+        "experienceId": null,
+        "createdAt": "2026-09-12T00:00:00.000Z"
+      },
+      {
+        "id": "public:ai-products:sample-mu",
+        "workspaceId": "public",
+        "topicId": "public:ai-products",
+        "sourceType": "replay",
+        "provider": "replay",
+        "sourceId": "teaching:ai-products:1",
+        "url": null,
+        "title": "教学场景 · 非真实知乎内容",
+        "summary": "原型上线后，持续处理账号、错误与用户反馈；每周的维护比最初搭建更需要判断。",
+        "displayAuthor": "阿沐（教学示例）",
+        "fetchedAt": "2026-09-07T00:00:00.000Z",
+        "contentHash": "c8830276a3d4260edb9e5927324f1d01e7bd6ad8149860a0ff545541889b1245",
+        "visibility": "public",
+        "provenance": {
+          "mode": "replay",
+          "provider": "replay",
+          "fetchedAt": "2026-09-07T00:00:00.000Z"
+        },
+        "experienceId": null,
+        "createdAt": "2026-09-12T00:00:00.000Z"
+      },
+      {
+        "id": "public:ai-products:sample-lin",
+        "workspaceId": "public",
+        "topicId": "public:ai-products",
+        "sourceType": "replay",
+        "provider": "replay",
+        "sourceId": "teaching:ai-products:2",
+        "url": null,
+        "title": "教学场景 · 非真实知乎内容",
+        "summary": "通过解释代码和修改小功能学习，但尚未记录脱离 AI 后能独立解决哪些问题。",
+        "displayAuthor": "林同学（教学示例）",
+        "fetchedAt": "2026-09-07T00:00:00.000Z",
+        "contentHash": "1b27cb113dea2ffc8c8f400663ffef08c1b83f49af462759a1c087d1fbcb6953",
+        "visibility": "public",
+        "provenance": {
+          "mode": "replay",
+          "provider": "replay",
+          "fetchedAt": "2026-09-07T00:00:00.000Z"
+        },
+        "experienceId": null,
+        "createdAt": "2026-09-12T00:00:00.000Z"
+      },
+      {
+        "id": "public:campus-ai:sample-zhou",
+        "workspaceId": "public",
+        "topicId": "public:campus-ai",
+        "sourceType": "replay",
+        "provider": "replay",
+        "sourceId": "teaching:campus-ai:0",
+        "url": null,
+        "title": "教学场景 · 非真实知乎内容",
+        "summary": "在课堂练习中用 AI 解释陌生术语，理解更快；没有做脱离工具后的测试。",
+        "displayAuthor": "小周（教学示例）",
+        "fetchedAt": "2026-09-07T00:00:00.000Z",
+        "contentHash": "613f5e87ea5859431d86a235d3b114e730ba54a3f25b624c4c03692a19a1a27d",
+        "visibility": "public",
+        "provenance": {
+          "mode": "replay",
+          "provider": "replay",
+          "fetchedAt": "2026-09-07T00:00:00.000Z"
+        },
+        "experienceId": null,
+        "createdAt": "2026-09-12T00:00:00.000Z"
+      },
+      {
+        "id": "public:campus-ai:sample-mu",
+        "workspaceId": "public",
+        "topicId": "public:campus-ai",
+        "sourceType": "replay",
+        "provider": "replay",
+        "sourceId": "teaching:campus-ai:1",
+        "url": null,
+        "title": "教学场景 · 非真实知乎内容",
+        "summary": "课程允许 AI 辅助但要求说明过程，老师仍通过课堂独立任务了解学习情况。",
+        "displayAuthor": "阿沐（教学示例）",
+        "fetchedAt": "2026-09-07T00:00:00.000Z",
+        "contentHash": "c2f99ad4763143645fa80cac3babf6fa0a460825383a995e695050136b0fc5c8",
+        "visibility": "public",
+        "provenance": {
+          "mode": "replay",
+          "provider": "replay",
+          "fetchedAt": "2026-09-07T00:00:00.000Z"
+        },
+        "experienceId": null,
+        "createdAt": "2026-09-12T00:00:00.000Z"
+      },
+      {
+        "id": "public:campus-ai:sample-lin",
+        "workspaceId": "public",
+        "topicId": "public:campus-ai",
+        "sourceType": "replay",
+        "provider": "replay",
+        "sourceId": "teaching:campus-ai:2",
+        "url": null,
+        "title": "教学场景 · 非真实知乎内容",
+        "summary": "担心一刀切的工具限制忽视不同任务，也希望获得明确可遵守的规则。",
+        "displayAuthor": "林同学（教学示例）",
+        "fetchedAt": "2026-09-07T00:00:00.000Z",
+        "contentHash": "0d70e38b4631f2588d5ef2efe6d8d27600bc9d74f6f0d6a754e2beb5c017d38c",
+        "visibility": "public",
+        "provenance": {
+          "mode": "replay",
+          "provider": "replay",
+          "fetchedAt": "2026-09-07T00:00:00.000Z"
+        },
+        "experienceId": null,
+        "createdAt": "2026-09-12T00:00:00.000Z"
+      }
+    ],
+    "experiences": [],
+    "matches": [],
+    "probes": [
+      {
+        "id": "public:ai-products:first-probe",
+        "workspaceId": "public",
+        "topicId": "public:ai-products",
+        "question": "做出第一个 AI 产品后，你独立解决过什么新问题？当时怎样判断修复确实有效？",
+        "targetUnknownId": "public:ai-products:transfer",
+        "rationale": "教学示例缺少迁移能力的具体记录，补充过程与结果有助于区分不同条件。",
+        "evidenceIds": [
+          "public:ai-products:sample-lin"
+        ],
+        "informationGainExplanation": "这条追问寻求可检查的行动与结果，而不是只收集赞成或反对。",
+        "status": "draft",
+        "baseVersionId": "public:ai-products:v1",
+        "modelRun": {
+          "mode": "replay",
+          "model": "kanshan-teaching-rules",
+          "createdAt": "2026-09-07T00:00:00.000Z",
+          "rulesVersion": "2026-09-07",
+          "promptVersion": "teaching-v1",
+          "inputEvidenceIds": [
+            "public:ai-products:sample-zhou",
+            "public:ai-products:sample-mu",
+            "public:ai-products:sample-lin"
+          ]
+        },
+        "reviewerId": null,
+        "approvedAt": null,
+        "createdAt": "2026-09-12T00:00:00.000Z",
+        "decisionReason": null
+      },
+      {
+        "id": "public:campus-ai:first-probe",
+        "workspaceId": "public",
+        "topicId": "public:campus-ai",
+        "question": "使用 AI 学习后，你怎样在不借助工具时验证自己确实理解？",
+        "targetUnknownId": "public:campus-ai:transfer",
+        "rationale": "教学示例缺少迁移能力的具体记录，补充过程与结果有助于区分不同条件。",
+        "evidenceIds": [
+          "public:campus-ai:sample-lin"
+        ],
+        "informationGainExplanation": "这条追问寻求可检查的行动与结果，而不是只收集赞成或反对。",
+        "status": "draft",
+        "baseVersionId": "public:campus-ai:v1",
+        "modelRun": {
+          "mode": "replay",
+          "model": "kanshan-teaching-rules",
+          "createdAt": "2026-09-07T00:00:00.000Z",
+          "rulesVersion": "2026-09-07",
+          "promptVersion": "teaching-v1",
+          "inputEvidenceIds": [
+            "public:campus-ai:sample-zhou",
+            "public:campus-ai:sample-mu",
+            "public:campus-ai:sample-lin"
+          ]
+        },
+        "reviewerId": null,
+        "approvedAt": null,
+        "createdAt": "2026-09-12T00:00:00.000Z",
+        "decisionReason": null
+      }
+    ],
+    "revisions": [],
+    "claimVersions": [
+      {
+        "id": "public:ai-products:v1",
+        "workspaceId": "public",
+        "topicId": "public:ai-products",
+        "versionNumber": 1,
+        "baseVersionId": null,
+        "text": "AI 能降低原型的制作门槛。是否能持续服务真实用户，还取决于测试、维护与独立判断能力；完成演示和持续运行需要分别讨论。",
+        "conditionsSnapshot": [
+          {
+            "id": "public:ai-products:prototype",
+            "kind": "support",
+            "label": "完成原型",
+            "status": "active",
+            "description": "明确范围的小型演示，能较快获得可见成果。",
+            "evidenceIds": [
+              "public:ai-products:sample-zhou"
+            ]
+          },
+          {
+            "id": "public:ai-products:maintenance",
+            "kind": "conflict",
+            "label": "持续维护",
+            "status": "active",
+            "description": "上线后的安全、测试与用户反馈需要持续投入。",
+            "evidenceIds": [
+              "public:ai-products:sample-mu"
+            ]
+          },
+          {
+            "id": "public:ai-products:transfer",
+            "kind": "unknown",
+            "label": "能否迁移到新问题？",
+            "status": "active",
+            "description": "还缺少脱离教程和现成提示后的独立判断记录。",
+            "evidenceIds": [
+              "public:ai-products:sample-lin"
+            ]
+          },
+          {
+            "id": "public:ai-products:outcome",
+            "kind": "context",
+            "label": "先说明成功标准",
+            "status": "active",
+            "description": "区分可以展示、有人使用、持续可用三个阶段。",
+            "evidenceIds": [
+              "public:ai-products:sample-zhou",
+              "public:ai-products:sample-mu",
+              "public:ai-products:sample-lin"
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "public:ai-products:sample-zhou",
+          "public:ai-products:sample-mu",
+          "public:ai-products:sample-lin"
+        ],
+        "contributorDisplaySnapshot": [
+          "小周（教学示例）",
+          "阿沐（教学示例）",
+          "林同学（教学示例）"
+        ],
+        "reviewerId": null,
+        "createdAt": "2026-09-12T00:00:00.000Z",
+        "publishedAt": "2026-09-07T00:00:00.000Z",
+        "status": "published"
+      },
+      {
+        "id": "public:campus-ai:v1",
+        "workspaceId": "public",
+        "topicId": "public:campus-ai",
+        "versionNumber": 1,
+        "baseVersionId": null,
+        "text": "AI 可以帮助解释概念与练习，但学习效果需要通过独立完成任务检验。工具使用边界、过程记录与评价方式，应结合具体课程共同讨论。",
+        "conditionsSnapshot": [
+          {
+            "id": "public:campus-ai:prototype",
+            "kind": "support",
+            "label": "解释与练习",
+            "status": "active",
+            "description": "有具体学习目标时，AI 可以提供解释与练习线索。",
+            "evidenceIds": [
+              "public:campus-ai:sample-zhou"
+            ]
+          },
+          {
+            "id": "public:campus-ai:maintenance",
+            "kind": "conflict",
+            "label": "独立能力",
+            "status": "active",
+            "description": "借助工具完成作业，并不能直接证明已经理解。",
+            "evidenceIds": [
+              "public:campus-ai:sample-mu"
+            ]
+          },
+          {
+            "id": "public:campus-ai:transfer",
+            "kind": "unknown",
+            "label": "怎样公平检验学习成果？",
+            "status": "active",
+            "description": "还缺少可比较的任务结果与清晰一致的评价规则。",
+            "evidenceIds": [
+              "public:campus-ai:sample-lin"
+            ]
+          },
+          {
+            "id": "public:campus-ai:outcome",
+            "kind": "context",
+            "label": "先说明课程与任务",
+            "status": "active",
+            "description": "不同任务需要的工具边界和过程证据可能不同。",
+            "evidenceIds": [
+              "public:campus-ai:sample-zhou",
+              "public:campus-ai:sample-mu",
+              "public:campus-ai:sample-lin"
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "public:campus-ai:sample-zhou",
+          "public:campus-ai:sample-mu",
+          "public:campus-ai:sample-lin"
+        ],
+        "contributorDisplaySnapshot": [
+          "小周（教学示例）",
+          "阿沐（教学示例）",
+          "林同学（教学示例）"
+        ],
+        "reviewerId": null,
+        "createdAt": "2026-09-12T00:00:00.000Z",
+        "publishedAt": "2026-09-07T00:00:00.000Z",
+        "status": "published"
+      }
+    ],
+    "publications": [],
+    "sourceSnapshots": [],
+    "auditEvents": [
+      {
+        "id": "00000000-0000-4000-8000-000000000001",
+        "workspaceId": "public",
+        "topicId": "public:ai-products",
+        "actorId": null,
+        "actorMode": "system",
+        "type": "topic.seeded",
+        "entityType": "topic",
+        "entityId": "public:ai-products",
+        "payloadSummary": {
+          "scenarioId": "teaching:ai-products",
+          "providerMode": "replay",
+          "versionNumber": 1
+        },
+        "occurredAt": "2026-09-12T00:00:00.000Z"
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000002",
+        "workspaceId": "public",
+        "topicId": "public:campus-ai",
+        "actorId": null,
+        "actorMode": "system",
+        "type": "topic.seeded",
+        "entityType": "topic",
+        "entityId": "public:campus-ai",
+        "payloadSummary": {
+          "scenarioId": "teaching:campus-ai",
+          "providerMode": "replay",
+          "versionNumber": 1
+        },
+        "occurredAt": "2026-09-12T00:00:00.000Z"
+      }
+    ],
+    "reports": []
+  },
+  "demo": {
+    "topics": [
+      {
+        "id": "browser-demo:ai-products",
+        "workspaceId": "browser-demo",
+        "slug": "ai-products",
+        "title": "没有编程经验，能否靠 AI 做出可持续产品？",
+        "template": "learning",
+        "summary": "把“做出来”与“用得住”分开，看看不同经历在哪些条件下成立。",
+        "currentVersionId": "browser-demo:ai-products:v1",
+        "creatorId": null,
+        "circleId": null,
+        "status": "active",
+        "createdAt": "2026-09-12T00:00:00.000Z",
+        "updatedAt": "2026-09-12T00:00:00.000Z"
+      },
+      {
+        "id": "browser-demo:campus-ai",
+        "workspaceId": "browser-demo",
+        "slug": "campus-ai",
+        "title": "大学课程应该怎样使用 AI 辅助学习？",
+        "template": "social",
+        "summary": "一个可切换的社会议题教学模板：兼顾学习收益、独立判断与公开规则。",
+        "currentVersionId": "browser-demo:campus-ai:v1",
+        "creatorId": null,
+        "circleId": null,
+        "status": "active",
+        "createdAt": "2026-09-12T00:00:00.000Z",
+        "updatedAt": "2026-09-12T00:00:00.000Z"
+      }
+    ],
+    "conditions": [
+      {
+        "id": "browser-demo:ai-products:maintenance",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:ai-products",
+        "label": "持续维护",
+        "description": "上线后的安全、测试与用户反馈需要持续投入。",
+        "kind": "conflict",
+        "evidenceIds": [
+          "browser-demo:ai-products:sample-mu"
+        ],
+        "status": "active"
+      },
+      {
+        "id": "browser-demo:ai-products:outcome",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:ai-products",
+        "label": "先说明成功标准",
+        "description": "区分可以展示、有人使用、持续可用三个阶段。",
+        "kind": "context",
+        "evidenceIds": [
+          "browser-demo:ai-products:sample-zhou",
+          "browser-demo:ai-products:sample-mu",
+          "browser-demo:ai-products:sample-lin"
+        ],
+        "status": "active"
+      },
+      {
+        "id": "browser-demo:ai-products:prototype",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:ai-products",
+        "label": "完成原型",
+        "description": "明确范围的小型演示，能较快获得可见成果。",
+        "kind": "support",
+        "evidenceIds": [
+          "browser-demo:ai-products:sample-zhou"
+        ],
+        "status": "active"
+      },
+      {
+        "id": "browser-demo:ai-products:transfer",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:ai-products",
+        "label": "能否迁移到新问题？",
+        "description": "还缺少脱离教程和现成提示后的独立判断记录。",
+        "kind": "unknown",
+        "evidenceIds": [
+          "browser-demo:ai-products:sample-lin"
+        ],
+        "status": "active"
+      },
+      {
+        "id": "browser-demo:campus-ai:maintenance",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:campus-ai",
+        "label": "独立能力",
+        "description": "借助工具完成作业，并不能直接证明已经理解。",
+        "kind": "conflict",
+        "evidenceIds": [
+          "browser-demo:campus-ai:sample-mu"
+        ],
+        "status": "active"
+      },
+      {
+        "id": "browser-demo:campus-ai:outcome",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:campus-ai",
+        "label": "先说明课程与任务",
+        "description": "不同任务需要的工具边界和过程证据可能不同。",
+        "kind": "context",
+        "evidenceIds": [
+          "browser-demo:campus-ai:sample-zhou",
+          "browser-demo:campus-ai:sample-mu",
+          "browser-demo:campus-ai:sample-lin"
+        ],
+        "status": "active"
+      },
+      {
+        "id": "browser-demo:campus-ai:prototype",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:campus-ai",
+        "label": "解释与练习",
+        "description": "有具体学习目标时，AI 可以提供解释与练习线索。",
+        "kind": "support",
+        "evidenceIds": [
+          "browser-demo:campus-ai:sample-zhou"
+        ],
+        "status": "active"
+      },
+      {
+        "id": "browser-demo:campus-ai:transfer",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:campus-ai",
+        "label": "怎样公平检验学习成果？",
+        "description": "还缺少可比较的任务结果与清晰一致的评价规则。",
+        "kind": "unknown",
+        "evidenceIds": [
+          "browser-demo:campus-ai:sample-lin"
+        ],
+        "status": "active"
+      }
+    ],
+    "evidence": [
+      {
+        "id": "00000000-0000-4000-8000-000000000003",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:ai-products",
+        "sourceType": "experience",
+        "provider": "experience",
+        "sourceId": "00000000-0000-4000-8000-000000000004",
+        "url": null,
+        "title": "一份新的亲身经历",
+        "summary": "【演示样例 · 虚构情境】我没有编程经验，借助 AI 两天完成原型，可以展示三个核心页面。给朋友试用后却发现权限错误和保存失败，持续维护又花了一周。我能独立重现问题并逐项测试之后，才敢把它交给更多人使用；完成展示还不能代表产品已经稳定。",
+        "displayAuthor": "演示维护者",
+        "fetchedAt": "2026-09-12T00:00:00.000Z",
+        "contentHash": "d3032f6bf6f7f05fe672df169ff1e720d9740101fe9c10ee7b96b5a2eef868a8",
+        "visibility": "public",
+        "provenance": {
+          "mode": "replay",
+          "provider": "experience",
+          "fetchedAt": "2026-09-12T00:00:00.000Z"
+        },
+        "experienceId": "00000000-0000-4000-8000-000000000004",
+        "createdAt": "2026-09-12T00:00:00.000Z"
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000005",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:ai-products",
+        "sourceType": "experience",
+        "provider": "experience",
+        "sourceId": "00000000-0000-4000-8000-000000000006",
+        "url": null,
+        "title": "一条新的讨论补充",
+        "summary": "【演示样例 · 虚构情境】建议先说明成功标准：完成原型、让朋友试用、持续维护三个月是不同目标。我的补充是把每次故障和修复测试记下来，再比较投入与结果，避免只用一个漂亮页面判断能力。",
+        "displayAuthor": "匿名知友",
+        "fetchedAt": "2026-09-12T00:00:00.000Z",
+        "contentHash": "b96656f2c81753bb6febb6e26a4f21ec7916a064382f4f5a3f298ed1d8df12b5",
+        "visibility": "public",
+        "provenance": {
+          "mode": "replay",
+          "provider": "experience",
+          "fetchedAt": "2026-09-12T00:00:00.000Z"
+        },
+        "experienceId": "00000000-0000-4000-8000-000000000006",
+        "createdAt": "2026-09-12T00:00:00.000Z"
+      },
+      {
+        "id": "browser-demo:ai-products:sample-zhou",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:ai-products",
+        "sourceType": "replay",
+        "provider": "replay",
+        "sourceId": "teaching:ai-products:0",
+        "url": null,
+        "title": "教学场景 · 非真实知乎内容",
+        "summary": "零编程经验，两天做出了可点击的作品展示；还没有真实用户与持续运行记录。",
+        "displayAuthor": "小周（教学示例）",
+        "fetchedAt": "2026-09-07T00:00:00.000Z",
+        "contentHash": "a71e6da4c5c8ace4dc4796c3be111f68390057b176cf9edf53082b891582d1e1",
+        "visibility": "public",
+        "provenance": {
+          "mode": "replay",
+          "provider": "replay",
+          "fetchedAt": "2026-09-07T00:00:00.000Z"
+        },
+        "experienceId": null,
+        "createdAt": "2026-09-12T00:00:00.000Z"
+      },
+      {
+        "id": "browser-demo:ai-products:sample-mu",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:ai-products",
+        "sourceType": "replay",
+        "provider": "replay",
+        "sourceId": "teaching:ai-products:1",
+        "url": null,
+        "title": "教学场景 · 非真实知乎内容",
+        "summary": "原型上线后，持续处理账号、错误与用户反馈；每周的维护比最初搭建更需要判断。",
+        "displayAuthor": "阿沐（教学示例）",
+        "fetchedAt": "2026-09-07T00:00:00.000Z",
+        "contentHash": "c8830276a3d4260edb9e5927324f1d01e7bd6ad8149860a0ff545541889b1245",
+        "visibility": "public",
+        "provenance": {
+          "mode": "replay",
+          "provider": "replay",
+          "fetchedAt": "2026-09-07T00:00:00.000Z"
+        },
+        "experienceId": null,
+        "createdAt": "2026-09-12T00:00:00.000Z"
+      },
+      {
+        "id": "browser-demo:ai-products:sample-lin",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:ai-products",
+        "sourceType": "replay",
+        "provider": "replay",
+        "sourceId": "teaching:ai-products:2",
+        "url": null,
+        "title": "教学场景 · 非真实知乎内容",
+        "summary": "通过解释代码和修改小功能学习，但尚未记录脱离 AI 后能独立解决哪些问题。",
+        "displayAuthor": "林同学（教学示例）",
+        "fetchedAt": "2026-09-07T00:00:00.000Z",
+        "contentHash": "1b27cb113dea2ffc8c8f400663ffef08c1b83f49af462759a1c087d1fbcb6953",
+        "visibility": "public",
+        "provenance": {
+          "mode": "replay",
+          "provider": "replay",
+          "fetchedAt": "2026-09-07T00:00:00.000Z"
+        },
+        "experienceId": null,
+        "createdAt": "2026-09-12T00:00:00.000Z"
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000007",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:campus-ai",
+        "sourceType": "experience",
+        "provider": "experience",
+        "sourceId": "00000000-0000-4000-8000-000000000008",
+        "url": null,
+        "title": "一份新的亲身经历",
+        "summary": "【演示样例 · 虚构情境】我在课程里先用 AI 做解释与练习，再关闭工具，独立完成一道改了条件的新题。第一次仍然无法解释关键步骤，重新理解概念并记录错因后，才完成第二次验证。这让我把作业完成度和独立能力分开记录，没有把一次通过当作普遍效果。",
+        "displayAuthor": "练习中的小林",
+        "fetchedAt": "2026-09-12T00:00:00.000Z",
+        "contentHash": "a6fa5ac3e61e002a365f65219c23b50a6897bbed270c1ddadbde1e99c20b95f7",
+        "visibility": "public",
+        "provenance": {
+          "mode": "replay",
+          "provider": "experience",
+          "fetchedAt": "2026-09-12T00:00:00.000Z"
+        },
+        "experienceId": "00000000-0000-4000-8000-000000000008",
+        "createdAt": "2026-09-12T00:00:00.000Z"
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000009",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:campus-ai",
+        "sourceType": "experience",
+        "provider": "experience",
+        "sourceId": "00000000-0000-4000-8000-000000000010",
+        "url": "https://docs.python.org/3/tutorial/",
+        "title": "用户提供的参考链接（未经平台验证）",
+        "summary": "【演示样例 · 虚构情境】这里附一个官方教程入口，演示怎样保存独立练习的参考链接。可以围绕课程目标选择小任务，记录使用工具前后的理解与测试结果。此链接仅作为待核对的参考入口，不能单独证明 AI 提高了学习效果，也没有替代课程规则。",
+        "displayAuthor": "资料收集员",
+        "fetchedAt": "2026-09-12T00:00:00.000Z",
+        "contentHash": "b09d88b2c3280528bff43aed4408ad63b2ce9f1c9e527cc7ffd11edcf92dbf37",
+        "visibility": "public",
+        "provenance": {
+          "mode": "replay",
+          "provider": "experience",
+          "fetchedAt": "2026-09-12T00:00:00.000Z",
+          "sourceNature": "user_provided"
+        },
+        "experienceId": "00000000-0000-4000-8000-000000000010",
+        "createdAt": "2026-09-12T00:00:00.000Z"
+      },
+      {
+        "id": "browser-demo:campus-ai:sample-zhou",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:campus-ai",
+        "sourceType": "replay",
+        "provider": "replay",
+        "sourceId": "teaching:campus-ai:0",
+        "url": null,
+        "title": "教学场景 · 非真实知乎内容",
+        "summary": "在课堂练习中用 AI 解释陌生术语，理解更快；没有做脱离工具后的测试。",
+        "displayAuthor": "小周（教学示例）",
+        "fetchedAt": "2026-09-07T00:00:00.000Z",
+        "contentHash": "613f5e87ea5859431d86a235d3b114e730ba54a3f25b624c4c03692a19a1a27d",
+        "visibility": "public",
+        "provenance": {
+          "mode": "replay",
+          "provider": "replay",
+          "fetchedAt": "2026-09-07T00:00:00.000Z"
+        },
+        "experienceId": null,
+        "createdAt": "2026-09-12T00:00:00.000Z"
+      },
+      {
+        "id": "browser-demo:campus-ai:sample-mu",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:campus-ai",
+        "sourceType": "replay",
+        "provider": "replay",
+        "sourceId": "teaching:campus-ai:1",
+        "url": null,
+        "title": "教学场景 · 非真实知乎内容",
+        "summary": "课程允许 AI 辅助但要求说明过程，老师仍通过课堂独立任务了解学习情况。",
+        "displayAuthor": "阿沐（教学示例）",
+        "fetchedAt": "2026-09-07T00:00:00.000Z",
+        "contentHash": "c2f99ad4763143645fa80cac3babf6fa0a460825383a995e695050136b0fc5c8",
+        "visibility": "public",
+        "provenance": {
+          "mode": "replay",
+          "provider": "replay",
+          "fetchedAt": "2026-09-07T00:00:00.000Z"
+        },
+        "experienceId": null,
+        "createdAt": "2026-09-12T00:00:00.000Z"
+      },
+      {
+        "id": "browser-demo:campus-ai:sample-lin",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:campus-ai",
+        "sourceType": "replay",
+        "provider": "replay",
+        "sourceId": "teaching:campus-ai:2",
+        "url": null,
+        "title": "教学场景 · 非真实知乎内容",
+        "summary": "担心一刀切的工具限制忽视不同任务，也希望获得明确可遵守的规则。",
+        "displayAuthor": "林同学（教学示例）",
+        "fetchedAt": "2026-09-07T00:00:00.000Z",
+        "contentHash": "0d70e38b4631f2588d5ef2efe6d8d27600bc9d74f6f0d6a754e2beb5c017d38c",
+        "visibility": "public",
+        "provenance": {
+          "mode": "replay",
+          "provider": "replay",
+          "fetchedAt": "2026-09-07T00:00:00.000Z"
+        },
+        "experienceId": null,
+        "createdAt": "2026-09-12T00:00:00.000Z"
+      }
+    ],
+    "experiences": [
+      {
+        "contributionKind": "experience",
+        "replyToProbeId": null,
+        "sourceUrl": null,
+        "displayAvatarUrl": null,
+        "id": "00000000-0000-4000-8000-000000000008",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:campus-ai",
+        "ownerId": "browser-demo-maintainer",
+        "rawText": "【演示样例 · 虚构情境】我在课程里先用 AI 做解释与练习，再关闭工具，独立完成一道改了条件的新题。第一次仍然无法解释关键步骤，重新理解概念并记录错因后，才完成第二次验证。这让我把作业完成度和独立能力分开记录，没有把一次通过当作普遍效果。",
+        "publicText": "【演示样例 · 虚构情境】我在课程里先用 AI 做解释与练习，再关闭工具，独立完成一道改了条件的新题。第一次仍然无法解释关键步骤，重新理解概念并记录错因后，才完成第二次验证。这让我把作业完成度和独立能力分开记录，没有把一次通过当作普遍效果。",
+        "displayMode": "pseudonym",
+        "displayName": "练习中的小林",
+        "consentId": "00000000-0000-4000-8000-000000000011",
+        "analysisStatus": "ready",
+        "analysisError": null,
+        "extractedConditions": [
+          "理解和独立验证代码"
+        ],
+        "caveats": [
+          "这是本地演示规则的条件匹配，尚未调用通用模型。",
+          "单次经历只能补充适用条件，公共答案仍需人工审核。"
+        ],
+        "createdAt": "2026-09-12T00:00:00.000Z",
+        "withdrawnAt": null,
+        "deletedAt": null
+      },
+      {
+        "contributionKind": "experience",
+        "replyToProbeId": null,
+        "sourceUrl": null,
+        "displayAvatarUrl": null,
+        "id": "00000000-0000-4000-8000-000000000004",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:ai-products",
+        "ownerId": "browser-demo-maintainer",
+        "rawText": "【演示样例 · 虚构情境】我没有编程经验，借助 AI 两天完成原型，可以展示三个核心页面。给朋友试用后却发现权限错误和保存失败，持续维护又花了一周。我能独立重现问题并逐项测试之后，才敢把它交给更多人使用；完成展示还不能代表产品已经稳定。",
+        "publicText": "【演示样例 · 虚构情境】我没有编程经验，借助 AI 两天完成原型，可以展示三个核心页面。给朋友试用后却发现权限错误和保存失败，持续维护又花了一周。我能独立重现问题并逐项测试之后，才敢把它交给更多人使用；完成展示还不能代表产品已经稳定。",
+        "displayMode": "nickname",
+        "displayName": "演示维护者",
+        "consentId": "00000000-0000-4000-8000-000000000012",
+        "analysisStatus": "ready",
+        "analysisError": null,
+        "extractedConditions": [
+          "完成展示原型",
+          "持续服务真实用户",
+          "权限、安全与数据保护",
+          "理解和独立验证代码"
+        ],
+        "caveats": [
+          "这是本地演示规则的条件匹配，尚未调用通用模型。",
+          "单次经历只能补充适用条件，公共答案仍需人工审核。"
+        ],
+        "createdAt": "2026-09-12T00:00:00.000Z",
+        "withdrawnAt": null,
+        "deletedAt": null
+      },
+      {
+        "contributionKind": "evidence",
+        "replyToProbeId": null,
+        "sourceUrl": "https://docs.python.org/3/tutorial/",
+        "displayAvatarUrl": null,
+        "id": "00000000-0000-4000-8000-000000000010",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:campus-ai",
+        "ownerId": "browser-demo-maintainer",
+        "rawText": "【演示样例 · 虚构情境】这里附一个官方教程入口，演示怎样保存独立练习的参考链接。可以围绕课程目标选择小任务，记录使用工具前后的理解与测试结果。此链接仅作为待核对的参考入口，不能单独证明 AI 提高了学习效果，也没有替代课程规则。",
+        "publicText": "【演示样例 · 虚构情境】这里附一个官方教程入口，演示怎样保存独立练习的参考链接。可以围绕课程目标选择小任务，记录使用工具前后的理解与测试结果。此链接仅作为待核对的参考入口，不能单独证明 AI 提高了学习效果，也没有替代课程规则。",
+        "displayMode": "pseudonym",
+        "displayName": "资料收集员",
+        "consentId": "00000000-0000-4000-8000-000000000013",
+        "analysisStatus": "ready",
+        "analysisError": null,
+        "extractedConditions": [
+          "理解和独立验证代码"
+        ],
+        "caveats": [
+          "这是本地演示规则的条件匹配，尚未调用通用模型。",
+          "单次经历只能补充适用条件，公共答案仍需人工审核。"
+        ],
+        "createdAt": "2026-09-12T00:00:00.000Z",
+        "withdrawnAt": null,
+        "deletedAt": null
+      },
+      {
+        "contributionKind": "comment",
+        "replyToProbeId": null,
+        "sourceUrl": null,
+        "displayAvatarUrl": null,
+        "id": "00000000-0000-4000-8000-000000000006",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:ai-products",
+        "ownerId": "browser-demo-maintainer",
+        "rawText": "【演示样例 · 虚构情境】建议先说明成功标准：完成原型、让朋友试用、持续维护三个月是不同目标。我的补充是把每次故障和修复测试记下来，再比较投入与结果，避免只用一个漂亮页面判断能力。",
+        "publicText": "【演示样例 · 虚构情境】建议先说明成功标准：完成原型、让朋友试用、持续维护三个月是不同目标。我的补充是把每次故障和修复测试记下来，再比较投入与结果，避免只用一个漂亮页面判断能力。",
+        "displayMode": "anonymous",
+        "displayName": "匿名知友",
+        "consentId": "00000000-0000-4000-8000-000000000014",
+        "analysisStatus": "ready",
+        "analysisError": null,
+        "extractedConditions": [
+          "完成展示原型",
+          "持续服务真实用户",
+          "理解和独立验证代码"
+        ],
+        "caveats": [
+          "这是本地演示规则的条件匹配，尚未调用通用模型。",
+          "单次经历只能补充适用条件，公共答案仍需人工审核。"
+        ],
+        "createdAt": "2026-09-12T00:00:00.000Z",
+        "withdrawnAt": null,
+        "deletedAt": null
+      }
+    ],
+    "matches": [
+      {
+        "id": "00000000-0000-4000-8000-000000000015",
+        "workspaceId": "browser-demo",
+        "experienceId": "00000000-0000-4000-8000-000000000004",
+        "conditionIds": [
+          "browser-demo:ai-products:maintenance"
+        ],
+        "evidenceIds": [
+          "00000000-0000-4000-8000-000000000003",
+          "browser-demo:ai-products:sample-zhou",
+          "browser-demo:ai-products:sample-mu"
+        ],
+        "relation": "conflict",
+        "reasons": [
+          "这条经历写到“【演示样例 · 虚构情境】我没有编程经验，借助 AI 两天完成原型，可以展示三个核心页面。给朋友试用后却发现权限错误和保存失败，持续维护又花了一”，直接涉及“持续维护”。",
+          "已有材料中，“【演示样例 · 虚构情境】我没有编程经验，借助 AI 两天完成原型，可以展示三个核心页面。给朋友试用后却发现权限错误”提供了可比较的条件；仍需核实两者的目标和使用阶段是否相同。"
+        ],
+        "confidence": 0.68,
+        "modelRun": {
+          "mode": "replay",
+          "model": "kanshan-local-rules-v1",
+          "createdAt": "2026-09-12T00:00:00.000Z",
+          "rulesVersion": "evidence-review-v1",
+          "promptVersion": "kanshan-structured-v1",
+          "inputEvidenceIds": [
+            "00000000-0000-4000-8000-000000000003",
+            "browser-demo:ai-products:sample-zhou",
+            "browser-demo:ai-products:sample-mu",
+            "browser-demo:ai-products:sample-lin"
+          ]
+        },
+        "createdAt": "2026-09-12T00:00:00.000Z"
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000016",
+        "workspaceId": "browser-demo",
+        "experienceId": "00000000-0000-4000-8000-000000000004",
+        "conditionIds": [
+          "browser-demo:ai-products:prototype"
+        ],
+        "evidenceIds": [
+          "00000000-0000-4000-8000-000000000003",
+          "browser-demo:ai-products:sample-zhou",
+          "browser-demo:ai-products:sample-mu"
+        ],
+        "relation": "conflict",
+        "reasons": [
+          "这条经历写到“【演示样例 · 虚构情境】我没有编程经验，借助 AI 两天完成原型，可以展示三个核心页面。给朋友试用后却发现权限错误和保存失败，持续维护又花了一”，直接涉及“完成原型”。",
+          "已有材料中，“【演示样例 · 虚构情境】我没有编程经验，借助 AI 两天完成原型，可以展示三个核心页面。给朋友试用后却发现权限错误”提供了可比较的条件；仍需核实两者的目标和使用阶段是否相同。"
+        ],
+        "confidence": 0.68,
+        "modelRun": {
+          "mode": "replay",
+          "model": "kanshan-local-rules-v1",
+          "createdAt": "2026-09-12T00:00:00.000Z",
+          "rulesVersion": "evidence-review-v1",
+          "promptVersion": "kanshan-structured-v1",
+          "inputEvidenceIds": [
+            "00000000-0000-4000-8000-000000000003",
+            "browser-demo:ai-products:sample-zhou",
+            "browser-demo:ai-products:sample-mu",
+            "browser-demo:ai-products:sample-lin"
+          ]
+        },
+        "createdAt": "2026-09-12T00:00:00.000Z"
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000017",
+        "workspaceId": "browser-demo",
+        "experienceId": "00000000-0000-4000-8000-000000000006",
+        "conditionIds": [
+          "browser-demo:ai-products:maintenance"
+        ],
+        "evidenceIds": [
+          "00000000-0000-4000-8000-000000000003",
+          "00000000-0000-4000-8000-000000000005",
+          "browser-demo:ai-products:sample-zhou"
+        ],
+        "relation": "support",
+        "reasons": [
+          "这条经历写到“【演示样例 · 虚构情境】建议先说明成功标准：完成原型、让朋友试用、持续维护三个月是不同目标。我的补充是把每次故障和修复测试记下来，再比较投入与”，直接涉及“持续维护”。",
+          "已有材料中，“【演示样例 · 虚构情境】我没有编程经验，借助 AI 两天完成原型，可以展示三个核心页面。给朋友试用后却发现权限错误”提供了可比较的条件；仍需核实两者的目标和使用阶段是否相同。"
+        ],
+        "confidence": 0.68,
+        "modelRun": {
+          "mode": "replay",
+          "model": "kanshan-local-rules-v1",
+          "createdAt": "2026-09-12T00:00:00.000Z",
+          "rulesVersion": "evidence-review-v1",
+          "promptVersion": "kanshan-structured-v1",
+          "inputEvidenceIds": [
+            "00000000-0000-4000-8000-000000000003",
+            "00000000-0000-4000-8000-000000000005",
+            "browser-demo:ai-products:sample-zhou",
+            "browser-demo:ai-products:sample-mu",
+            "browser-demo:ai-products:sample-lin"
+          ]
+        },
+        "createdAt": "2026-09-12T00:00:00.000Z"
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000018",
+        "workspaceId": "browser-demo",
+        "experienceId": "00000000-0000-4000-8000-000000000006",
+        "conditionIds": [
+          "browser-demo:ai-products:outcome"
+        ],
+        "evidenceIds": [
+          "00000000-0000-4000-8000-000000000003",
+          "00000000-0000-4000-8000-000000000005",
+          "browser-demo:ai-products:sample-zhou"
+        ],
+        "relation": "support",
+        "reasons": [
+          "这条经历写到“【演示样例 · 虚构情境】建议先说明成功标准：完成原型、让朋友试用、持续维护三个月是不同目标。我的补充是把每次故障和修复测试记下来，再比较投入与”，直接涉及“先说明成功标准”。",
+          "已有材料中，“【演示样例 · 虚构情境】我没有编程经验，借助 AI 两天完成原型，可以展示三个核心页面。给朋友试用后却发现权限错误”提供了可比较的条件；仍需核实两者的目标和使用阶段是否相同。"
+        ],
+        "confidence": 0.68,
+        "modelRun": {
+          "mode": "replay",
+          "model": "kanshan-local-rules-v1",
+          "createdAt": "2026-09-12T00:00:00.000Z",
+          "rulesVersion": "evidence-review-v1",
+          "promptVersion": "kanshan-structured-v1",
+          "inputEvidenceIds": [
+            "00000000-0000-4000-8000-000000000003",
+            "00000000-0000-4000-8000-000000000005",
+            "browser-demo:ai-products:sample-zhou",
+            "browser-demo:ai-products:sample-mu",
+            "browser-demo:ai-products:sample-lin"
+          ]
+        },
+        "createdAt": "2026-09-12T00:00:00.000Z"
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000019",
+        "workspaceId": "browser-demo",
+        "experienceId": "00000000-0000-4000-8000-000000000006",
+        "conditionIds": [
+          "browser-demo:ai-products:prototype"
+        ],
+        "evidenceIds": [
+          "00000000-0000-4000-8000-000000000003",
+          "00000000-0000-4000-8000-000000000005",
+          "browser-demo:ai-products:sample-zhou"
+        ],
+        "relation": "support",
+        "reasons": [
+          "这条经历写到“【演示样例 · 虚构情境】建议先说明成功标准：完成原型、让朋友试用、持续维护三个月是不同目标。我的补充是把每次故障和修复测试记下来，再比较投入与”，直接涉及“完成原型”。",
+          "已有材料中，“【演示样例 · 虚构情境】我没有编程经验，借助 AI 两天完成原型，可以展示三个核心页面。给朋友试用后却发现权限错误”提供了可比较的条件；仍需核实两者的目标和使用阶段是否相同。"
+        ],
+        "confidence": 0.68,
+        "modelRun": {
+          "mode": "replay",
+          "model": "kanshan-local-rules-v1",
+          "createdAt": "2026-09-12T00:00:00.000Z",
+          "rulesVersion": "evidence-review-v1",
+          "promptVersion": "kanshan-structured-v1",
+          "inputEvidenceIds": [
+            "00000000-0000-4000-8000-000000000003",
+            "00000000-0000-4000-8000-000000000005",
+            "browser-demo:ai-products:sample-zhou",
+            "browser-demo:ai-products:sample-mu",
+            "browser-demo:ai-products:sample-lin"
+          ]
+        },
+        "createdAt": "2026-09-12T00:00:00.000Z"
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000020",
+        "workspaceId": "browser-demo",
+        "experienceId": "00000000-0000-4000-8000-000000000008",
+        "conditionIds": [
+          "browser-demo:campus-ai:maintenance"
+        ],
+        "evidenceIds": [
+          "00000000-0000-4000-8000-000000000007",
+          "browser-demo:campus-ai:sample-zhou",
+          "browser-demo:campus-ai:sample-mu"
+        ],
+        "relation": "conflict",
+        "reasons": [
+          "这条经历写到“【演示样例 · 虚构情境】我在课程里先用 AI 做解释与练习，再关闭工具，独立完成一道改了条件的新题。第一次仍然无法解释关键步骤，重新理解概念并”，直接涉及“独立能力”。",
+          "已有材料中，“【演示样例 · 虚构情境】我在课程里先用 AI 做解释与练习，再关闭工具，独立完成一道改了条件的新题。第一次仍然无法”提供了可比较的条件；仍需核实两者的目标和使用阶段是否相同。"
+        ],
+        "confidence": 0.68,
+        "modelRun": {
+          "mode": "replay",
+          "model": "kanshan-local-rules-v1",
+          "createdAt": "2026-09-12T00:00:00.000Z",
+          "rulesVersion": "evidence-review-v1",
+          "promptVersion": "kanshan-structured-v1",
+          "inputEvidenceIds": [
+            "00000000-0000-4000-8000-000000000007",
+            "browser-demo:campus-ai:sample-zhou",
+            "browser-demo:campus-ai:sample-mu",
+            "browser-demo:campus-ai:sample-lin"
+          ]
+        },
+        "createdAt": "2026-09-12T00:00:00.000Z"
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000021",
+        "workspaceId": "browser-demo",
+        "experienceId": "00000000-0000-4000-8000-000000000008",
+        "conditionIds": [
+          "browser-demo:campus-ai:prototype"
+        ],
+        "evidenceIds": [
+          "00000000-0000-4000-8000-000000000007",
+          "browser-demo:campus-ai:sample-zhou",
+          "browser-demo:campus-ai:sample-mu"
+        ],
+        "relation": "conflict",
+        "reasons": [
+          "这条经历写到“【演示样例 · 虚构情境】我在课程里先用 AI 做解释与练习，再关闭工具，独立完成一道改了条件的新题。第一次仍然无法解释关键步骤，重新理解概念并”，直接涉及“解释与练习”。",
+          "已有材料中，“【演示样例 · 虚构情境】我在课程里先用 AI 做解释与练习，再关闭工具，独立完成一道改了条件的新题。第一次仍然无法”提供了可比较的条件；仍需核实两者的目标和使用阶段是否相同。"
+        ],
+        "confidence": 0.68,
+        "modelRun": {
+          "mode": "replay",
+          "model": "kanshan-local-rules-v1",
+          "createdAt": "2026-09-12T00:00:00.000Z",
+          "rulesVersion": "evidence-review-v1",
+          "promptVersion": "kanshan-structured-v1",
+          "inputEvidenceIds": [
+            "00000000-0000-4000-8000-000000000007",
+            "browser-demo:campus-ai:sample-zhou",
+            "browser-demo:campus-ai:sample-mu",
+            "browser-demo:campus-ai:sample-lin"
+          ]
+        },
+        "createdAt": "2026-09-12T00:00:00.000Z"
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000022",
+        "workspaceId": "browser-demo",
+        "experienceId": "00000000-0000-4000-8000-000000000008",
+        "conditionIds": [
+          "browser-demo:campus-ai:transfer"
+        ],
+        "evidenceIds": [
+          "00000000-0000-4000-8000-000000000007",
+          "browser-demo:campus-ai:sample-zhou",
+          "browser-demo:campus-ai:sample-mu"
+        ],
+        "relation": "conflict",
+        "reasons": [
+          "这条经历写到“【演示样例 · 虚构情境】我在课程里先用 AI 做解释与练习，再关闭工具，独立完成一道改了条件的新题。第一次仍然无法解释关键步骤，重新理解概念并”，直接涉及“怎样公平检验学习成果？”。",
+          "已有材料中，“【演示样例 · 虚构情境】我在课程里先用 AI 做解释与练习，再关闭工具，独立完成一道改了条件的新题。第一次仍然无法”提供了可比较的条件；仍需核实两者的目标和使用阶段是否相同。"
+        ],
+        "confidence": 0.68,
+        "modelRun": {
+          "mode": "replay",
+          "model": "kanshan-local-rules-v1",
+          "createdAt": "2026-09-12T00:00:00.000Z",
+          "rulesVersion": "evidence-review-v1",
+          "promptVersion": "kanshan-structured-v1",
+          "inputEvidenceIds": [
+            "00000000-0000-4000-8000-000000000007",
+            "browser-demo:campus-ai:sample-zhou",
+            "browser-demo:campus-ai:sample-mu",
+            "browser-demo:campus-ai:sample-lin"
+          ]
+        },
+        "createdAt": "2026-09-12T00:00:00.000Z"
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000023",
+        "workspaceId": "browser-demo",
+        "experienceId": "00000000-0000-4000-8000-000000000010",
+        "conditionIds": [
+          "browser-demo:campus-ai:transfer"
+        ],
+        "evidenceIds": [
+          "00000000-0000-4000-8000-000000000007",
+          "00000000-0000-4000-8000-000000000009",
+          "browser-demo:campus-ai:sample-zhou"
+        ],
+        "relation": "conflict",
+        "reasons": [
+          "这条经历写到“【演示样例 · 虚构情境】这里附一个官方教程入口，演示怎样保存独立练习的参考链接。可以围绕课程目标选择小任务，记录使用工具前后的理解与测试结果。”，直接涉及“怎样公平检验学习成果？”。",
+          "已有材料中，“【演示样例 · 虚构情境】我在课程里先用 AI 做解释与练习，再关闭工具，独立完成一道改了条件的新题。第一次仍然无法”提供了可比较的条件；仍需核实两者的目标和使用阶段是否相同。"
+        ],
+        "confidence": 0.68,
+        "modelRun": {
+          "mode": "replay",
+          "model": "kanshan-local-rules-v1",
+          "createdAt": "2026-09-12T00:00:00.000Z",
+          "rulesVersion": "evidence-review-v1",
+          "promptVersion": "kanshan-structured-v1",
+          "inputEvidenceIds": [
+            "00000000-0000-4000-8000-000000000007",
+            "00000000-0000-4000-8000-000000000009",
+            "browser-demo:campus-ai:sample-zhou",
+            "browser-demo:campus-ai:sample-mu",
+            "browser-demo:campus-ai:sample-lin"
+          ]
+        },
+        "createdAt": "2026-09-12T00:00:00.000Z"
+      }
+    ],
+    "probes": [
+      {
+        "id": "browser-demo:ai-products:first-probe",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:ai-products",
+        "question": "做出第一个 AI 产品后，你独立解决过什么新问题？当时怎样判断修复确实有效？",
+        "targetUnknownId": "browser-demo:ai-products:transfer",
+        "rationale": "教学示例缺少迁移能力的具体记录，补充过程与结果有助于区分不同条件。",
+        "evidenceIds": [
+          "browser-demo:ai-products:sample-lin"
+        ],
+        "informationGainExplanation": "这条追问寻求可检查的行动与结果，而不是只收集赞成或反对。",
+        "status": "draft",
+        "baseVersionId": "browser-demo:ai-products:v1",
+        "modelRun": {
+          "mode": "replay",
+          "model": "kanshan-teaching-rules",
+          "createdAt": "2026-09-07T00:00:00.000Z",
+          "rulesVersion": "2026-09-07",
+          "promptVersion": "teaching-v1",
+          "inputEvidenceIds": [
+            "browser-demo:ai-products:sample-zhou",
+            "browser-demo:ai-products:sample-mu",
+            "browser-demo:ai-products:sample-lin"
+          ]
+        },
+        "reviewerId": null,
+        "approvedAt": null,
+        "createdAt": "2026-09-12T00:00:00.000Z",
+        "decisionReason": null
+      },
+      {
+        "id": "browser-demo:campus-ai:first-probe",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:campus-ai",
+        "question": "使用 AI 学习后，你怎样在不借助工具时验证自己确实理解？",
+        "targetUnknownId": "browser-demo:campus-ai:transfer",
+        "rationale": "教学示例缺少迁移能力的具体记录，补充过程与结果有助于区分不同条件。",
+        "evidenceIds": [
+          "browser-demo:campus-ai:sample-lin"
+        ],
+        "informationGainExplanation": "这条追问寻求可检查的行动与结果，而不是只收集赞成或反对。",
+        "status": "draft",
+        "baseVersionId": "browser-demo:campus-ai:v1",
+        "modelRun": {
+          "mode": "replay",
+          "model": "kanshan-teaching-rules",
+          "createdAt": "2026-09-07T00:00:00.000Z",
+          "rulesVersion": "2026-09-07",
+          "promptVersion": "teaching-v1",
+          "inputEvidenceIds": [
+            "browser-demo:campus-ai:sample-zhou",
+            "browser-demo:campus-ai:sample-mu",
+            "browser-demo:campus-ai:sample-lin"
+          ]
+        },
+        "reviewerId": null,
+        "approvedAt": null,
+        "createdAt": "2026-09-12T00:00:00.000Z",
+        "decisionReason": null
+      }
+    ],
+    "revisions": [
+      {
+        "id": "00000000-0000-4000-8000-000000000024",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:ai-products",
+        "baseVersionId": "browser-demo:ai-products:v1",
+        "proposedText": "AI 能降低原型的制作门槛。是否能持续服务真实用户，还取决于测试、维护与独立判断能力；完成演示和持续运行需要分别讨论。\n\n新增经历提示：“【演示样例 · 虚构情境】我没有编程经验，借助 AI 两天完成原型，可以展示三个核心页面。给朋友试用后却发现权限错误和保存失败，持续维护又花了一周。我能独立重现问题并逐项测试之后，才敢把它交给更多人使用；完成展示还不能代表产品已经稳定。”；“【演示样例 · 虚构情境】建议先说明成功标准：完成原型、让朋友试用、持续维护三个月是不同目标。我的补充是把每次故障和修复测试记下来，再比较投入与结果，避免只用一个漂亮页面判断能力。”。这些经历涉及完成展示原型、持续服务真实用户、权限、安全与数据保护、理解和独立验证代码，需要分别核对适用条件。这仍是有限案例，不代表所有人都会得到相同结果。",
+        "proposedConditions": [
+          {
+            "id": "browser-demo:ai-products:maintenance",
+            "kind": "conflict",
+            "label": "持续维护",
+            "description": "上线后的安全、测试与用户反馈需要持续投入。",
+            "evidenceIds": [
+              "browser-demo:ai-products:sample-mu"
+            ]
+          },
+          {
+            "id": "browser-demo:ai-products:outcome",
+            "kind": "context",
+            "label": "先说明成功标准",
+            "description": "区分可以展示、有人使用、持续可用三个阶段。",
+            "evidenceIds": [
+              "browser-demo:ai-products:sample-zhou",
+              "browser-demo:ai-products:sample-mu",
+              "browser-demo:ai-products:sample-lin"
+            ]
+          },
+          {
+            "id": "browser-demo:ai-products:prototype",
+            "kind": "support",
+            "label": "完成原型",
+            "description": "明确范围的小型演示，能较快获得可见成果。",
+            "evidenceIds": [
+              "browser-demo:ai-products:sample-zhou"
+            ]
+          },
+          {
+            "id": "browser-demo:ai-products:transfer",
+            "kind": "unknown",
+            "label": "能否迁移到新问题？",
+            "description": "还缺少脱离教程和现成提示后的独立判断记录。",
+            "evidenceIds": [
+              "browser-demo:ai-products:sample-lin"
+            ]
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000025",
+            "kind": "context",
+            "label": "完成展示原型",
+            "description": "完成展示原型",
+            "evidenceIds": [
+              "00000000-0000-4000-8000-000000000003",
+              "00000000-0000-4000-8000-000000000005"
+            ]
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000026",
+            "kind": "context",
+            "label": "持续服务真实用户",
+            "description": "持续服务真实用户",
+            "evidenceIds": [
+              "00000000-0000-4000-8000-000000000003",
+              "00000000-0000-4000-8000-000000000005"
+            ]
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000027",
+            "kind": "context",
+            "label": "权限、安全与数据保护",
+            "description": "权限、安全与数据保护",
+            "evidenceIds": [
+              "00000000-0000-4000-8000-000000000003"
+            ]
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000028",
+            "kind": "context",
+            "label": "理解和独立验证代码",
+            "description": "理解和独立验证代码",
+            "evidenceIds": [
+              "00000000-0000-4000-8000-000000000003",
+              "00000000-0000-4000-8000-000000000005"
+            ]
+          }
+        ],
+        "diff": [
+          {
+            "kind": "added",
+            "after": "新增经历提示：“【演示样例 · 虚构情境】我没有编程经验，借助 AI 两天完成原型，可以展示三个核心页面。给朋友试用后却发现权限错误和保存失败，持续维护又花了一周。我能独立重现问题并逐项测试之后，才敢把它交给更多人使用；完成展示还不能代表产品已经稳定。”；“【演示样例 · 虚构情境】建议先说明成功标准：完成原型、让朋友试用、持续维护三个月是不同目标。我的补充是把每次故障和修复测试记下来，再比较投入与结果，避免只用一个漂亮页面判断能力。”。这些经历涉及完成展示原型、持续服务真实用户、权限、安全与数据保护、理解和独立验证代码，需要分别核对适用条件。这仍是有限案例，不代表所有人都会得到相同结果。",
+            "reason": "新增案例补充了适用情境，保留原有答案和分歧，由维护者判断是否接受。",
+            "evidenceIds": [
+              "00000000-0000-4000-8000-000000000003",
+              "00000000-0000-4000-8000-000000000005"
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "00000000-0000-4000-8000-000000000003",
+          "00000000-0000-4000-8000-000000000005"
+        ],
+        "contributorIds": [
+          "browser-demo-maintainer"
+        ],
+        "explanation": "看山把新经历保留为有来源的补充，没有用少量案例覆盖原结论。这是本地规则生成的待审核修订。",
+        "confidence": 0.62,
+        "status": "proposed",
+        "modelRun": {
+          "mode": "replay",
+          "model": "kanshan-local-rules-v1",
+          "createdAt": "2026-09-12T00:00:00.000Z",
+          "rulesVersion": "evidence-review-v1",
+          "promptVersion": "kanshan-structured-v1",
+          "inputEvidenceIds": [
+            "00000000-0000-4000-8000-000000000003",
+            "00000000-0000-4000-8000-000000000005"
+          ]
+        },
+        "reviewerId": null,
+        "decidedAt": null,
+        "createdAt": "2026-09-12T00:00:00.000Z",
+        "decisionReason": null,
+        "acceptedVersionId": null
+      }
+    ],
+    "claimVersions": [
+      {
+        "id": "browser-demo:ai-products:v1",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:ai-products",
+        "versionNumber": 1,
+        "baseVersionId": null,
+        "text": "AI 能降低原型的制作门槛。是否能持续服务真实用户，还取决于测试、维护与独立判断能力；完成演示和持续运行需要分别讨论。",
+        "conditionsSnapshot": [
+          {
+            "id": "browser-demo:ai-products:prototype",
+            "kind": "support",
+            "label": "完成原型",
+            "status": "active",
+            "description": "明确范围的小型演示，能较快获得可见成果。",
+            "evidenceIds": [
+              "browser-demo:ai-products:sample-zhou"
+            ]
+          },
+          {
+            "id": "browser-demo:ai-products:maintenance",
+            "kind": "conflict",
+            "label": "持续维护",
+            "status": "active",
+            "description": "上线后的安全、测试与用户反馈需要持续投入。",
+            "evidenceIds": [
+              "browser-demo:ai-products:sample-mu"
+            ]
+          },
+          {
+            "id": "browser-demo:ai-products:transfer",
+            "kind": "unknown",
+            "label": "能否迁移到新问题？",
+            "status": "active",
+            "description": "还缺少脱离教程和现成提示后的独立判断记录。",
+            "evidenceIds": [
+              "browser-demo:ai-products:sample-lin"
+            ]
+          },
+          {
+            "id": "browser-demo:ai-products:outcome",
+            "kind": "context",
+            "label": "先说明成功标准",
+            "status": "active",
+            "description": "区分可以展示、有人使用、持续可用三个阶段。",
+            "evidenceIds": [
+              "browser-demo:ai-products:sample-zhou",
+              "browser-demo:ai-products:sample-mu",
+              "browser-demo:ai-products:sample-lin"
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "browser-demo:ai-products:sample-zhou",
+          "browser-demo:ai-products:sample-mu",
+          "browser-demo:ai-products:sample-lin"
+        ],
+        "contributorDisplaySnapshot": [
+          "小周（教学示例）",
+          "阿沐（教学示例）",
+          "林同学（教学示例）"
+        ],
+        "reviewerId": null,
+        "createdAt": "2026-09-12T00:00:00.000Z",
+        "publishedAt": "2026-09-07T00:00:00.000Z",
+        "status": "published"
+      },
+      {
+        "id": "browser-demo:campus-ai:v1",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:campus-ai",
+        "versionNumber": 1,
+        "baseVersionId": null,
+        "text": "AI 可以帮助解释概念与练习，但学习效果需要通过独立完成任务检验。工具使用边界、过程记录与评价方式，应结合具体课程共同讨论。",
+        "conditionsSnapshot": [
+          {
+            "id": "browser-demo:campus-ai:prototype",
+            "kind": "support",
+            "label": "解释与练习",
+            "status": "active",
+            "description": "有具体学习目标时，AI 可以提供解释与练习线索。",
+            "evidenceIds": [
+              "browser-demo:campus-ai:sample-zhou"
+            ]
+          },
+          {
+            "id": "browser-demo:campus-ai:maintenance",
+            "kind": "conflict",
+            "label": "独立能力",
+            "status": "active",
+            "description": "借助工具完成作业，并不能直接证明已经理解。",
+            "evidenceIds": [
+              "browser-demo:campus-ai:sample-mu"
+            ]
+          },
+          {
+            "id": "browser-demo:campus-ai:transfer",
+            "kind": "unknown",
+            "label": "怎样公平检验学习成果？",
+            "status": "active",
+            "description": "还缺少可比较的任务结果与清晰一致的评价规则。",
+            "evidenceIds": [
+              "browser-demo:campus-ai:sample-lin"
+            ]
+          },
+          {
+            "id": "browser-demo:campus-ai:outcome",
+            "kind": "context",
+            "label": "先说明课程与任务",
+            "status": "active",
+            "description": "不同任务需要的工具边界和过程证据可能不同。",
+            "evidenceIds": [
+              "browser-demo:campus-ai:sample-zhou",
+              "browser-demo:campus-ai:sample-mu",
+              "browser-demo:campus-ai:sample-lin"
+            ]
+          }
+        ],
+        "evidenceIds": [
+          "browser-demo:campus-ai:sample-zhou",
+          "browser-demo:campus-ai:sample-mu",
+          "browser-demo:campus-ai:sample-lin"
+        ],
+        "contributorDisplaySnapshot": [
+          "小周（教学示例）",
+          "阿沐（教学示例）",
+          "林同学（教学示例）"
+        ],
+        "reviewerId": null,
+        "createdAt": "2026-09-12T00:00:00.000Z",
+        "publishedAt": "2026-09-07T00:00:00.000Z",
+        "status": "published"
+      }
+    ],
+    "publications": [],
+    "sourceSnapshots": [
+      {
+        "id": "00000000-0000-4000-8000-000000000029",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:ai-products",
+        "provider": "llm",
+        "mode": "replay",
+        "payload": {
+          "status": "loading",
+          "entityId": "00000000-0000-4000-8000-000000000004",
+          "operation": "analysis"
+        },
+        "fetchedAt": "2026-09-12T00:00:00.000Z",
+        "lastError": null,
+        "createdAt": "2026-09-12T00:00:00.000Z"
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000030",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:ai-products",
+        "provider": "llm",
+        "mode": "replay",
+        "payload": {
+          "status": "ready",
+          "entityId": "00000000-0000-4000-8000-000000000004",
+          "operation": "analysis"
+        },
+        "fetchedAt": "2026-09-12T00:00:01.000Z",
+        "lastError": null,
+        "createdAt": "2026-09-12T00:00:01.000Z"
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000031",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:ai-products",
+        "provider": "llm",
+        "mode": "replay",
+        "payload": {
+          "status": "loading",
+          "entityId": "00000000-0000-4000-8000-000000000006",
+          "operation": "analysis"
+        },
+        "fetchedAt": "2026-09-12T00:00:02.000Z",
+        "lastError": null,
+        "createdAt": "2026-09-12T00:00:02.000Z"
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000032",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:ai-products",
+        "provider": "llm",
+        "mode": "replay",
+        "payload": {
+          "status": "ready",
+          "entityId": "00000000-0000-4000-8000-000000000006",
+          "operation": "analysis"
+        },
+        "fetchedAt": "2026-09-12T00:00:03.000Z",
+        "lastError": null,
+        "createdAt": "2026-09-12T00:00:03.000Z"
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000033",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:campus-ai",
+        "provider": "llm",
+        "mode": "replay",
+        "payload": {
+          "status": "loading",
+          "entityId": "00000000-0000-4000-8000-000000000008",
+          "operation": "analysis"
+        },
+        "fetchedAt": "2026-09-12T00:00:04.000Z",
+        "lastError": null,
+        "createdAt": "2026-09-12T00:00:04.000Z"
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000034",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:campus-ai",
+        "provider": "llm",
+        "mode": "replay",
+        "payload": {
+          "status": "ready",
+          "entityId": "00000000-0000-4000-8000-000000000008",
+          "operation": "analysis"
+        },
+        "fetchedAt": "2026-09-12T00:00:05.000Z",
+        "lastError": null,
+        "createdAt": "2026-09-12T00:00:05.000Z"
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000035",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:campus-ai",
+        "provider": "llm",
+        "mode": "replay",
+        "payload": {
+          "status": "loading",
+          "entityId": "00000000-0000-4000-8000-000000000010",
+          "operation": "analysis"
+        },
+        "fetchedAt": "2026-09-12T00:00:06.000Z",
+        "lastError": null,
+        "createdAt": "2026-09-12T00:00:06.000Z"
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000036",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:campus-ai",
+        "provider": "llm",
+        "mode": "replay",
+        "payload": {
+          "status": "ready",
+          "entityId": "00000000-0000-4000-8000-000000000010",
+          "operation": "analysis"
+        },
+        "fetchedAt": "2026-09-12T00:00:07.000Z",
+        "lastError": null,
+        "createdAt": "2026-09-12T00:00:07.000Z"
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000037",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:ai-products",
+        "provider": "llm",
+        "mode": "replay",
+        "payload": {
+          "status": "loading",
+          "operation": "revision"
+        },
+        "fetchedAt": "2026-09-12T00:00:08.000Z",
+        "lastError": null,
+        "createdAt": "2026-09-12T00:00:08.000Z"
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000038",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:ai-products",
+        "provider": "llm",
+        "mode": "replay",
+        "payload": {
+          "status": "ready",
+          "entityId": "00000000-0000-4000-8000-000000000024",
+          "operation": "revision"
+        },
+        "fetchedAt": "2026-09-12T00:00:09.000Z",
+        "lastError": null,
+        "createdAt": "2026-09-12T00:00:09.000Z"
+      }
+    ],
+    "auditEvents": [
+      {
+        "id": "00000000-0000-4000-8000-000000000039",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:ai-products",
+        "actorId": null,
+        "actorMode": "system",
+        "type": "topic.seeded",
+        "entityType": "topic",
+        "entityId": "browser-demo:ai-products",
+        "payloadSummary": {
+          "scenarioId": "teaching:ai-products",
+          "providerMode": "replay",
+          "versionNumber": 1
+        },
+        "occurredAt": "2026-09-12T00:00:00.000Z"
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000040",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:ai-products",
+        "actorId": "browser-demo-maintainer",
+        "actorMode": "replay",
+        "type": "experience.submitted",
+        "entityType": "experience",
+        "entityId": "00000000-0000-4000-8000-000000000004",
+        "payloadSummary": {
+          "displayMode": "nickname",
+          "providerMode": "replay",
+          "contributionKind": "experience"
+        },
+        "occurredAt": "2026-09-12T00:00:00.000Z"
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000041",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:ai-products",
+        "actorId": "browser-demo-maintainer",
+        "actorMode": "replay",
+        "type": "experience.analyzed",
+        "entityType": "experience",
+        "entityId": "00000000-0000-4000-8000-000000000004",
+        "payloadSummary": {
+          "status": "ready",
+          "providerMode": "replay"
+        },
+        "occurredAt": "2026-09-12T00:00:00.000Z"
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000042",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:ai-products",
+        "actorId": "browser-demo-maintainer",
+        "actorMode": "replay",
+        "type": "experience.submitted",
+        "entityType": "experience",
+        "entityId": "00000000-0000-4000-8000-000000000006",
+        "payloadSummary": {
+          "displayMode": "anonymous",
+          "providerMode": "replay",
+          "contributionKind": "comment"
+        },
+        "occurredAt": "2026-09-12T00:00:00.000Z"
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000043",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:ai-products",
+        "actorId": "browser-demo-maintainer",
+        "actorMode": "replay",
+        "type": "experience.analyzed",
+        "entityType": "experience",
+        "entityId": "00000000-0000-4000-8000-000000000006",
+        "payloadSummary": {
+          "status": "ready",
+          "providerMode": "replay"
+        },
+        "occurredAt": "2026-09-12T00:00:00.000Z"
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000044",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:ai-products",
+        "actorId": "browser-demo-maintainer",
+        "actorMode": "replay",
+        "type": "revision.proposed",
+        "entityType": "revision",
+        "entityId": "00000000-0000-4000-8000-000000000024",
+        "payloadSummary": {
+          "providerMode": "replay",
+          "baseVersionId": "browser-demo:ai-products:v1",
+          "evidenceCount": 2
+        },
+        "occurredAt": "2026-09-12T00:00:00.000Z"
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000045",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:campus-ai",
+        "actorId": null,
+        "actorMode": "system",
+        "type": "topic.seeded",
+        "entityType": "topic",
+        "entityId": "browser-demo:campus-ai",
+        "payloadSummary": {
+          "scenarioId": "teaching:campus-ai",
+          "providerMode": "replay",
+          "versionNumber": 1
+        },
+        "occurredAt": "2026-09-12T00:00:00.000Z"
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000046",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:campus-ai",
+        "actorId": "browser-demo-maintainer",
+        "actorMode": "replay",
+        "type": "experience.submitted",
+        "entityType": "experience",
+        "entityId": "00000000-0000-4000-8000-000000000008",
+        "payloadSummary": {
+          "displayMode": "pseudonym",
+          "providerMode": "replay",
+          "contributionKind": "experience"
+        },
+        "occurredAt": "2026-09-12T00:00:00.000Z"
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000047",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:campus-ai",
+        "actorId": "browser-demo-maintainer",
+        "actorMode": "replay",
+        "type": "experience.analyzed",
+        "entityType": "experience",
+        "entityId": "00000000-0000-4000-8000-000000000008",
+        "payloadSummary": {
+          "status": "ready",
+          "providerMode": "replay"
+        },
+        "occurredAt": "2026-09-12T00:00:00.000Z"
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000048",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:campus-ai",
+        "actorId": "browser-demo-maintainer",
+        "actorMode": "replay",
+        "type": "experience.submitted",
+        "entityType": "experience",
+        "entityId": "00000000-0000-4000-8000-000000000010",
+        "payloadSummary": {
+          "displayMode": "pseudonym",
+          "providerMode": "replay",
+          "contributionKind": "evidence"
+        },
+        "occurredAt": "2026-09-12T00:00:00.000Z"
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000049",
+        "workspaceId": "browser-demo",
+        "topicId": "browser-demo:campus-ai",
+        "actorId": "browser-demo-maintainer",
+        "actorMode": "replay",
+        "type": "experience.analyzed",
+        "entityType": "experience",
+        "entityId": "00000000-0000-4000-8000-000000000010",
+        "payloadSummary": {
+          "status": "ready",
+          "providerMode": "replay"
+        },
+        "occurredAt": "2026-09-12T00:00:00.000Z"
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000050",
+        "workspaceId": "browser-demo",
+        "topicId": null,
+        "actorId": "browser-demo-maintainer",
+        "actorMode": "replay",
+        "type": "demo.library_seeded",
+        "entityType": "workspace",
+        "entityId": "browser-demo",
+        "payloadSummary": {
+          "scenarioId": "initial-v1",
+          "providerMode": "replay"
+        },
+        "occurredAt": "2026-09-12T00:00:00.000Z"
+      }
+    ],
+    "reports": []
+  }
+}
