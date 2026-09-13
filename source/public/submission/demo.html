@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#26336a">
+  <title>活答案 · 实际界面演示</title>
+  <style>
+    :root{color-scheme:light;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;color:#202950;background:#f3f4fb}
+    *{box-sizing:border-box}body{margin:0}main{max-width:1200px;margin:0 auto;padding:38px 26px 60px}a{color:#3051ed;text-underline-offset:4px}header{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:26px}.brand{font-weight:800;font-size:20px;text-decoration:none}h1{font-size:clamp(30px,5vw,48px);line-height:1.3;letter-spacing:-1px;margin:15px 0}.eyebrow{font-size:13px;font-weight:700;color:#52628c;letter-spacing:2px}.intro{font-size:17px;line-height:1.8;color:#59688b;max-width:860px}.badge{display:inline-block;padding:7px 12px;background:#ffe478;border:1px solid #bda95c;border-radius:8px;font-size:13px;font-weight:650}.player{margin:26px 0;background:#202950;border:2px solid #26336a;border-radius:15px;overflow:hidden;box-shadow:5px 6px 0 #26336a}video{width:100%;display:block;max-height:85vh}section{background:#fff;border:1px solid #cbd0e2;border-radius:13px;padding:25px 28px;margin-top:26px}h2{font-size:20px;margin:0 0 12px}p,li{font-size:15px;line-height:1.9}ol{padding-left:22px;margin-bottom:0}.notes{color:#59688b}.actions{display:flex;gap:18px;flex-wrap:wrap;margin-top:25px}.actions>a:first-child{padding:12px 19px;border-radius:9px;color:#fff;background:#3051ed;text-decoration:none;font-weight:650}.actions>a:last-child{align-self:center}footer{font-size:13px;line-height:1.8;color:#687596;margin-top:30px}@media(max-width:600px){main{padding:25px 16px 40px}header{align-items:flex-start}.intro{font-size:15px}section{padding:20px}.player{box-shadow:3px 4px 0 #26336a}video{max-height:none}}
+    a:focus-visible,video:focus-visible{outline:3px solid #3051ed;outline-offset:5px}header a{min-height:44px;display:inline-flex;align-items:center}h1{text-wrap:balance}
+  </style>
+</head>
+<body>
+  <main>
+    <header><a class="brand" href="../">活答案<span style="color:#3051ed">.</span> 好奇心俱乐部</a><a href="./">作品计划书</a></header>
+    <div class="eyebrow">实际界面 · 操作演示</div>
+    <h1>让新的经历，推动答案更新。</h1>
+    <p class="intro">从贡献经历、检查公开内容，到核对修订依据、人工确认新版本。观看一段约 84 秒的实际界面录制，了解「活答案」如何把社区经验连接到答案的持续演进。</p>
+    <span class="badge">浏览器规则演示 · 0 真实模型调用</span>
+    <div class="player"><video controls playsinline preload="metadata" aria-label="活答案实际界面演示视频" src="./demo.mp4">你的浏览器暂不支持视频播放，请<a href="./demo.mp4">下载 MP4</a>观看。</video></div>
+    <p class="notes">视频无旁白，步骤说明在画面底部。手机可横屏或全屏观看。</p>
+    <section>
+      <h2>视频里实际操作了什么</h2>
+      <ol>
+        <li>进入独立的演示维护者空间，查看答案条件和引用依据。</li>
+        <li>打开「我的经历」，输入一份合成经历，预览匿名身份和邮箱隐藏效果，再确认保存。</li>
+        <li>切换到「看山的小本子」，查看待验证问题与一份预置教学修订，核对变化和证据。</li>
+        <li>人工确认采纳修订，查看 v2 与 v1 历史，再回到更新后的答案。</li>
+      </ol>
+    </section>
+    <section class="notes">
+      <h2>这段演示的边界</h2>
+      <p>视频使用全新的浏览器演示空间。人物、经历和证据样例均为合成教学数据，输入的邮箱也是专门设置的示例值。修订是提前准备的教学提案，用于展示审核过程。新增经历与这份预置提案是两组独立演示素材。</p>
+      <p>当前 GitHub Pages 版本使用本地规则与浏览器存储，不调用真实模型或知乎接口，也不会向知乎发布内容。视频没有旁白，步骤说明与这项演示边界均显示在画面底部。</p>
+    </section>
+    <div class="actions"><a href="../">亲自体验活答案 →</a><a href="./demo.mp4" download>下载 MP4 视频</a></div>
+    <footer>知乎黑客松校园新锐季参赛作品 · 活答案 · 好奇心俱乐部</footer>
+  </main>
+</body>
+</html>

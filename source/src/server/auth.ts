@@ -198,12 +198,14 @@ export async function exchangeAuthorizationCode(code: string, fetcher: typeof fe
 }
 
 function profileConfig() {
-  const url = process.env.ZHIHU_OAUTH_PROFILE_URL, subjectField = process.env.ZHIHU_OAUTH_SUBJECT_FIELD, displayNameField = process.env.ZHIHU_OAUTH_DISPLAY_NAME_FIELD;
-  if (!url || !subjectField || !displayNameField) throw new AuthError("PROFILE_CONTRACT_PENDING", "知乎的账号标识协议尚待平台确认，目前不会创建正式登录身份。", 503);
+  // Official hackathon Skill 0.7.2 defines this profile contract independently
+  // from the developer content APIs, which use a different authorization scheme.
+  const url = process.env.ZHIHU_OAUTH_PROFILE_URL || "https://openapi.zhihu.com/user";
+  const subjectField = process.env.ZHIHU_OAUTH_SUBJECT_FIELD || "hash_id";
+  const displayNameField = process.env.ZHIHU_OAUTH_DISPLAY_NAME_FIELD || "fullname";
   let parsed: URL;
   try { parsed = new URL(url); } catch { throw new AuthError("PROFILE_CONFIG_INVALID", "知乎账号资料接口配置无效。", 503); }
-  const safePath = (field: string) => /^[A-Za-z][A-Za-z0-9_]*(?:\.[A-Za-z][A-Za-z0-9_]*)*$/.test(field) && !field.split(".").some(x => ["__proto__", "prototype", "constructor"].includes(x));
-  if (parsed.protocol !== "https:" || parsed.hostname !== "openapi.zhihu.com" || parsed.username || parsed.password || parsed.port || parsed.hash || parsed.search || !safePath(subjectField) || !safePath(displayNameField) || subjectField === displayNameField) throw new AuthError("PROFILE_CONFIG_INVALID", "知乎账号资料协议必须使用平台确认的官方 HTTPS 地址与独立标识字段。", 503);
+  if (parsed.protocol !== "https:" || parsed.hostname !== "openapi.zhihu.com" || parsed.pathname !== "/user" || parsed.username || parsed.password || parsed.port || parsed.hash || parsed.search || subjectField !== "hash_id" || displayNameField !== "fullname") throw new AuthError("PROFILE_CONFIG_INVALID", "请使用黑客松官方 /user 资料接口及 hash_id、fullname 字段。", 503);
   return { url: parsed.toString(), subjectField, displayNameField };
 }
 function fieldAt(input: unknown, field: string): unknown {
@@ -214,7 +216,9 @@ function fieldAt(input: unknown, field: string): unknown {
   }
   return value;
 }
-export function validateZhihuProfile(input: unknown, subjectField: string, displayNameField: string) {
+export function validateZhihuProfile(input: unknown, subjectField = "hash_id", displayNameField = "fullname") {
+  // uid is an int64 and can lose precision in JSON Number parsing. It is never
+  // converted or used as an identity fallback; the documented hash_id is a string.
   const subject = fieldAt(input, subjectField), displayName = fieldAt(input, displayNameField);
   const parsed = z.object({ subject: z.string().trim().min(1).max(256).regex(/^[A-Za-z0-9_.:-]+$/), displayName: z.string().trim().min(1).max(120) }).safeParse({ subject, displayName });
   if (!parsed.success || subjectField === displayNameField) throw new AuthError("PROFILE_IDENTITY_INVALID", "知乎没有返回经过确认的稳定账号标识，未创建登录身份。", 502);
@@ -222,15 +226,17 @@ export function validateZhihuProfile(input: unknown, subjectField: string, displ
 }
 export async function fetchZhihuProfile(accessToken: string, fetcher: typeof fetch = fetch) {
   const config = profileConfig();
-  const accessSecret = process.env.ZHIHU_ACCESS_SECRET;
-  if (!accessSecret) throw new AuthError("PROFILE_AUTH_UNCONFIGURED", "知乎账号资料读取权限尚未配置。", 503);
   let response: Response;
-  try { response = await fetcher(config.url, { headers: { Authorization: `Bearer ${accessSecret}`, "X-OAuth-Token": accessToken, "X-Request-Timestamp": String(Math.floor(Date.now() / 1000)) }, redirect: "error", signal: AbortSignal.timeout(15000), cache: "no-store" }); }
+  try { response = await fetcher(config.url, { method: "GET", headers: { Authorization: `Bearer ${accessToken}` }, redirect: "error", signal: AbortSignal.timeout(15000), cache: "no-store" }); }
   catch { throw new AuthError("PROFILE_UNAVAILABLE", "暂时无法校验知乎账号身份，请稍后重试。", 502); }
   if (!response.ok) throw new AuthError("PROFILE_UNAVAILABLE", "暂时无法校验知乎账号身份，请稍后重试。", 502);
   let body: unknown;
   try { body = await response.json(); } catch { throw new AuthError("PROFILE_IDENTITY_INVALID", "知乎返回的账号资料无法校验。", 502); }
-  if (body && typeof body === "object") { const b = body as Record<string, unknown>; const code = b.code ?? b.Code; if (code !== undefined && code !== 0 && code !== 20000) throw new AuthError("PROFILE_REJECTED", "知乎账号资料读取未成功。", 502); }
+  if (body && typeof body === "object") {
+    const b = body as Record<string, unknown>, code = b.code ?? b.Code;
+    if (code !== undefined && code !== 0 && code !== 20000) throw new AuthError("PROFILE_REJECTED", "知乎账号资料读取未成功。", 502);
+    if (code !== undefined) body = b.data ?? b.Data ?? b;
+  }
   return validateZhihuProfile(body, config.subjectField, config.displayNameField);
 }
 export async function completeZhihuOAuth(request: Request) {
@@ -264,9 +270,9 @@ export async function getAuthCapabilities() {
   try { await sessionSecret(); protectedWrites = true; } catch { /* Public reads remain available. */ }
   let oauthConfigured = false, profileConfigured = false;
   try { oauthConfig(); oauthConfigured = true; } catch { /* Only expose a boolean. */ }
-  try { profileConfig(); profileConfigured = Boolean(process.env.ZHIHU_ACCESS_SECRET); } catch { /* No guessed identity schema. */ }
+  try { profileConfig(); profileConfigured = true; } catch { /* Reject overrides outside the documented contract. */ }
   const encryptionConfigured = validSecret(process.env.TOKEN_ENCRYPTION_KEY) || (process.env.NODE_ENV !== "production" && !process.env.TOKEN_ENCRYPTION_KEY);
-  return { demo: demoEnabled() && protectedWrites, protectedWrites, zhihuOAuth: { configured: oauthConfigured, profileConfigured, encryptionConfigured, available: protectedWrites && oauthConfigured && profileConfigured && encryptionConfigured, status: !oauthConfigured ? "unconfigured" : !profileConfigured ? "profile_contract_pending" : !encryptionConfigured ? "encryption_not_configured" : "requires_verified_callback" }, externalPublishingRequiresLiveIdentity: true };
+  return { demo: demoEnabled() && protectedWrites, protectedWrites, zhihuOAuth: { configured: oauthConfigured, profileConfigured, encryptionConfigured, available: protectedWrites && oauthConfigured && profileConfigured && encryptionConfigured, status: !oauthConfigured ? "unconfigured" : !profileConfigured ? "profile_config_invalid" : !encryptionConfigured ? "encryption_not_configured" : "requires_verified_callback" }, externalPublishingRequiresLiveIdentity: true };
 }
 
 export function authErrorResponse(error: unknown): Response {
